@@ -1,0 +1,24 @@
+$mtop_big: 64px;
+$grey: #d6d6d6;
+$big_padding: 50px 100px;
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.mtop_big {
+    margin-top: $mtop_big;
+}
+
+.bg_grey {
+    background-color: $grey;
+}
+
+.p_50_100 {
+    padding: $big_padding;
+}
+
+.bg_dark_grey {
+    background-color: $grey - #222;
+}

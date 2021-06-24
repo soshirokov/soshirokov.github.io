@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.mtop_big {
+  margin-top: 64px;
+}
+
+.bg_grey {
+  background-color: #d6d6d6;
+}
+
+.p_50_100 {
+  padding: 50px 100px;
+}
+
+.bg_dark_grey {
+  background-color: #b4b4b4;
+}
+/*# sourceMappingURL=bootstrap-styles.css.map */
