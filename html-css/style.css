@@ -1,0 +1,261 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #f38191;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    color: #222222;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 32px;
+    letter-spacing: 0.025em;
+}
+
+img {
+    max-width: 100%
+}
+
+.color_pink {
+    color: #f38191;
+}
+
+.container {
+    width: 1140px;
+    margin: 0  auto;
+}
+
+.header {
+    padding: 25px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo__text {
+    margin-left: 3px;
+    font-family: Lato;
+    font-size: 27px;
+    text-transform: uppercase;
+}
+
+.logo__link:hover {
+    color: inherit;
+}
+
+.weight_bold {
+    font-weight: 900;
+}
+
+.search__list {
+    padding: 0 15px;
+    height: 38px;
+    background-color: #cdcdcc;
+    background-image: linear-gradient(180.0deg, #f9f9f9 0%, #f5f5f5 100%);
+    border: 1px solid #e6e6e6;
+    border-radius: 3px 0px 0px 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.caret {
+    margin-left: 8px;
+    font-weight: 400;
+    color: #838383;
+}
+
+.search__form {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-left: 37px;
+}
+
+.search__input {
+    width: 280px;
+    height: 38px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-left: none;
+    padding: 16px 14px;
+    box-sizing: border-box;
+    outline: none;
+    font-size: 14px;
+}
+
+.search__submit {
+    height: 38px;width: 38px;background-color: #ffffff;box-shadow: none;
+    border: 1px solid #e6e6e6;border-radius: 0px 3px 3px 0px;border-left: none;color: #a4a4a4;
+    font-size: 14px;
+}
+
+.personal {
+    display: flex;
+    align-items: center;
+}
+
+.cart {
+    width: 32px;
+    height: 29px;   
+}
+
+.account {
+    height: 38px;
+    background-color: #f16d7f;
+    padding: 0 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 25px;
+}
+
+.color_white {
+    color: #ffffff;
+}
+
+.menu__list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    height: 50px;
+    align-items: center;
+}
+
+.menu__item {
+    line-height: 26px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-right: 38px;
+}
+
+.banner {
+    background-color: #e8e8e8;
+    background-image: url(img/banner.png);
+    background-position: 50% 100%;
+    height: 615px;
+    display: flex;
+    align-items: center;
+    background-repeat: no-repeat;
+}
+
+.menu {
+    border-top: 1px solid #ececec;
+}
+
+.banner__text {
+    position: relative;
+    padding-left: 24px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    line-height: 1.2;
+}
+
+.banner__text:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15px;
+    width: 12px;
+    height: 96px;
+    background-color: #f38191;
+}
+
+.banner__heading {
+    font-size: 60px;
+}
+
+.banner__subheading {
+    font-size: 40px;
+}
+
+.offers__list {
+    margin-top: 100px;
+    display: flex;
+}
+
+.offers__left-column {
+    margin-right: 20px;
+    flex-grow: 1;
+}
+
+.offers__right-column {
+    flex-grow: 1;
+}
+
+.offers__item {
+    background-size: cover;
+    margin-bottom: 20px;
+    padding-top: 25px;
+    display: flex;
+}
+
+.offers__item_big {
+    height: 542px;
+}
+
+.offers__item_small {
+    height: 261px;
+}
+
+.offers__item_for-men {
+    background-image: url(img/for-men.png);
+}
+
+.offers__item_accesories {
+    background-image: url(img/accesories.png);
+}
+
+.offers__item_women {
+    background-image: url(img/women.png);
+}
+
+.offers__item_for-kids {
+    background-image: url(img/for-kids.png);
+}
+
+.offers__text {
+    background-color: #ffffff;
+    height: 82px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.offers__label {
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+.offers__highlight {
+    font-size: 30px;
+    line-height: 1.2;
+}
+
+.offers__link:hover {
+    color: inherit;
+}
