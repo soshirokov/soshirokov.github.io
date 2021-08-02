@@ -18,7 +18,7 @@ body {
     color: #222222;
     font-size: 14px;
     font-weight: 300;
-    line-height: 32px;
+    line-height: 100%;
     letter-spacing: 0.025em;
 }
 
@@ -118,16 +118,16 @@ img {
     height: 29px;   
 }
 
-.account {
-    height: 38px;
+.account__menu-link {
     background-color: #f16d7f;
-    padding: 0 19px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 11px 19px;
     color: #fff;
     font-weight: 400;
     margin-left: 25px;
+}
+
+.account__menu-link:hover {
+    color: #ffffff;
 }
 
 .color_white {
@@ -258,4 +258,121 @@ img {
 
 .offers__link:hover {
     color: inherit;
+}
+
+.fetured {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.fetured__heading {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.fetured__subheading {
+    font-size: 14px;
+    font-weight: 400;
+    color: #9f9f9f;
+    margin-top: 15px;
+}
+
+
+.fetured__list {
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.fetured__item-img-part {
+    position: relative;
+    display: flex;
+}
+
+.fetured__item-hover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(58,56,56,0.83);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    opacity: 0;
+}
+
+.fetured__item {
+    width: 261px;
+    margin-bottom: 40px;
+}
+
+.fetured__item-add-to-cart {
+    line-height: 39px;
+    background-color: rgba(255,255,255,0.0);
+    border: 1px solid #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    padding: 0 12px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.fetured__item-add-to-cart:hover {
+    color: #ffffff;
+}
+
+.fetured__add-to-cart-img {
+    height: 22px;
+    width: 23px;
+    margin-right: 8px;
+}
+
+.fetured__item:hover .fetured__item-hover {
+    opacity: 1;
+}
+
+.fetured__item:hover {
+    box-shadow: 0px 5px 8px 0px rgba(0,0,0,0.15);
+}
+
+.fetured__description {
+    padding: 20px 15px;
+    text-align: left;
+}
+
+.fetured__item-label {
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.fetured__item-price {
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 17px;
+}
+
+.fetured__all-products {
+    background-color: #f16d7f;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 15px 24px;
+    font-size: 16px;
+    line-height: 100%;
+    margin-top: 20px;
+    line-height: 49px;
+}
+
+.fetured__all-products:hover {
+    color: #ffffff;
+}
+
+.arrow {
+    font-size: 15px;
+    margin-left: 9px;
 }
