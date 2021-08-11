@@ -20,23 +20,22 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="my-container">
             <div class="header">
                 <div class="brand">
-                    <div class="logo">
+                    <a href="index.html" class="logo">
                         <div class="logo__image">
-                            <a href="index.html"><img src="img/logo.png" alt="The Brand"></a>
+                            <img src="img/logo.png" alt="The Brand">
                         </div>
-                        <div class="logo__text"><a class="logo__link" href="index.html">Bran</a><span
-                                class="color_pink weight_bold"><a href="index.html">d</a></span></div>
-                    </div>
+                        <div class="logo__text">Bran<span class="color_pink weight_bold">d</span></div>
+                    </a>
                     <div class="search">
                         <form class="search__form" action="#">
                             <div class="search__list">
                                 <span>Browse</span>
                                 <span class="caret"><i class="fas fa-caret-down"></i></span>
                             </div>
-                            <input class="search__input" placeholder="Search for Item...">
+                            <input id="search" class="search__input" placeholder="Search for Item...">
 
                             <button class="search__submit" type="submit"><i class="fas fa-search"></i></button>
 
@@ -57,7 +56,7 @@
         </div>
     </header>
     <nav class="menu">
-        <div class="container">
+        <div class="my-container">
             <ul class="menu__list">
                 <li class="menu__item"><a href="#" class="menu__link">Home</a>
                     <div class="mega-menu">
@@ -392,7 +391,7 @@
         </div>
     </nav>
     <nav class="page-header">
-        <div class="container">
+        <div class="my-container">
             <div class="page-header-block">
                 <h1 class="page-title">New Arrivals</h1>
                 <div class="breadcrumbs">
@@ -427,11 +426,11 @@
         </div>
     </section>
     <section class="details">
-        <div class="container details-container">
+        <div class="my-container details-container">
             <div class="product">
                 <h3 class="product__collection">WOMEN COLLECTION</h3>
                 <h2 class="product__name">Moschino Cheap And Chic</h2>
-                <p class="product__dedcriprion">Compellingly actualize fully researched processes before proactive
+                <p class="product__descriprion">Compellingly actualize fully researched processes before proactive
                     outsourcing. Progressively syndicate collaborative architectures before cutting-edge services.
                     Completely visualize parallel core competencies rather than exceptional portals.</p>
                 <div class="product__attributes">
@@ -442,50 +441,49 @@
                 </div>
                 <span class="product__price">$561</span>
                 <hr class="product__divider">
-                <div class="product__add-to-cart-block">
+                <div class="product__atc-block">
                     <form action="#">
-                        <div class="product__add-to-cart-inputs">
-                            <div class="product__add-to-cart-input-block">
-                                <label for="" class="product__add-to-cart-input-label">choose color</label>
-                                <div class="product__add-to-cart-input-box">
-                                    <select name="color" id="color" class="form-select product__add-to-cart-input"
-                                        aria-label="Default select example">
-                                        <option selected>Red</option>
-                                        <option value="1"><span class="select-green"></span>Green</option>
-                                        <option value="2"><span class="select-blue"></span>Blue</option>
+                        <div class="product__atc-inputs">
+                            <div class="product__atc-input-block">
+                                <label for="color" class="product__atc-input-label">choose color</label>
+                                <div class="product__atc-input-box">
+                                    <select id="color" name="color" id="color" class="form-select product__atc-input">
+                                        <option value="1" selected>Red</option>
+                                        <option value="2"><span class="select-green"></span>Green</option>
+                                        <option value="3"><span class="select-blue"></span>Blue</option>
                                     </select>
                                     <span class="select-arrow"><i class="fas fa-angle-down"></i></span>
                                 </div>
                             </div>
-                            <div class="product__add-to-cart-input-block">
-                                <label for="" class="product__add-to-cart-input-label">choose size</label>
-                                <div class="product__add-to-cart-input-box">
-                                    <select name="size" id="size" class="form-select product__add-to-cart-input"
+                            <div class="product__atc-input-block">
+                                <label for="size" class="product__atc-input-label">choose size</label>
+                                <div class="product__atc-input-box">
+                                    <select id="size" name="size" id="size" class="form-select product__atc-input"
                                         aria-label="Default select example">
-                                        <option selected>XXL</option>
-                                        <option value="1"><span class="select-green"></span>XL</option>
-                                        <option value="2"><span class="select-blue"></span>L</option>
+                                        <option value="1" selected>XXL</option>
+                                        <option value="2"><span class="select-green"></span>XL</option>
+                                        <option value="3"><span class="select-blue"></span>L</option>
                                     </select>
                                     <span class="select-arrow"><i class="fas fa-angle-down"></i></span>
                                 </div>
                             </div>
-                            <div class="product__add-to-cart-input-block">
-                                <label for="" class="product__add-to-cart-input-label">choose size</label>
-                                <div class="product__add-to-cart-input-box">
-                                    <input name="quantity" type="text" class="form-select product__add-to-cart-input"
-                                        value="3">
+                            <div class="product__atc-input-block">
+                                <label for="quantity" class="product__atc-input-label">choose size</label>
+                                <div class="product__atc-input-box">
+                                    <input id="quantity" name="quantity" type="number" min="1" max="100"
+                                        class="form-select product__atc-input" value="3">
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="product__add-to-cart-link"><img src="img/add_to_cart_pink.png"
-                                alt="Add to cart" class="product__add-to-cart-img">Add to Cart</button>
+                        <button type="submit" class="product__atc-link"><img src="img/add_to_cart_pink.png"
+                                alt="Add to cart" class="product__atc-img">Add to Cart</button>
                     </form>
                 </div>
             </div>
         </div>
     </section>
     <section class="up-sale">
-        <div class="container">
+        <div class="my-container">
             <h2 class="up-sale__heading">you may like also</h2>
             <div class="fetured__list up-sale__list">
                 <div class="fetured__item">
@@ -500,7 +498,7 @@
                         </div>
                     </a>
                     <div class="fetured__item-add-to-cart-block"><a href="#" class="fetured__item-add-to-cart"><img
-                                src="img/add-to-cart.png" alt="Add to Cart" class="fetured__add-to-cart-img">Add to
+                                src="img/add-to-cart.png" alt="Add to Cart" class="fetured__atc-img">Add to
                             Cart</a></div>
                 </div>
                 <div class="fetured__item">
@@ -515,7 +513,7 @@
                         </div>
                     </a>
                     <div class="fetured__item-add-to-cart-block"><a href="#" class="fetured__item-add-to-cart"><img
-                                src="img/add-to-cart.png" alt="Add to Cart" class="fetured__add-to-cart-img">Add to
+                                src="img/add-to-cart.png" alt="Add to Cart" class="fetured__atc-img">Add to
                             Cart</a></div>
                 </div>
                 <div class="fetured__item">
@@ -529,7 +527,7 @@
                         </div>
                     </a>
                     <div class="fetured__item-add-to-cart-block"><a href="#" class="fetured__item-add-to-cart"><img
-                                src="img/add-to-cart.png" alt="Add to Cart" class="fetured__add-to-cart-img">Add to
+                                src="img/add-to-cart.png" alt="Add to Cart" class="fetured__atc-img">Add to
                             Cart</a></div>
                 </div>
                 <div class="fetured__item">
@@ -543,14 +541,14 @@
                         </div>
                     </a>
                     <div class="fetured__item-add-to-cart-block"><a href="#" class="fetured__item-add-to-cart"><img
-                                src="img/add-to-cart.png" alt="Add to Cart" class="fetured__add-to-cart-img">Add to
+                                src="img/add-to-cart.png" alt="Add to Cart" class="fetured__atc-img">Add to
                             Cart</a></div>
                 </div>
             </div>
         </div>
     </section>
     <section class="subscribe">
-        <div class="container height_full">
+        <div class="my-container height_full">
             <div class="subscribe__block height_full">
                 <div class="quotes height_full">
                     <div class="quotes__carousel">
@@ -576,7 +574,7 @@
                     <div class="subscribe-form__heading">Subscribe</div>
                     <div class="subscribe-form__subheading">for our newletter and promotion</div>
                     <form class="subscribe-form__form" action="#">
-                        <input type="email" required="true" class="subscribe-form__input"
+                        <input id="subscribe-email" type="email" required="true" class="subscribe-form__input"
                             placeholder="Enter Your Email">
                         <button class="subscribe-form__button" type="submit">Subscribe</button>
                     </form>
@@ -586,16 +584,15 @@
     </section>
     <footer>
         <div class="footer-content">
-            <div class="container">
+            <div class="my-container">
                 <div class="footer-content-block">
                     <div class="about">
-                        <div class="logo">
+                        <a href="index.html" class="logo">
                             <div class="logo__image">
-                                <a href="index.html"><img src="img/logo.png" alt="The Brand"></a>
+                                <img src="img/logo.png" alt="The Brand">
                             </div>
-                            <div class="logo__text"><a class="logo__link" href="index.html">Bran</a><span
-                                    class="color_pink weight_bold"><a href="index.html">d</a></span></div>
-                        </div>
+                            <div class="logo__text">Bran<span class="color_pink weight_bold">d</span></div>
+                        </a>
                         <div class="about__text">
                             Objectively transition extensive data rather than cross functional solutions. Monotonectally
                             syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an
@@ -641,7 +638,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div class="container">
+            <div class="my-container">
                 <div class="footer-bootom-block">
                     <div class="copyright">© 2017 Brand All Rights Reserved.</div>
                     <div class="socials">
