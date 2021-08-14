@@ -178,6 +178,37 @@ header {
   font-size: 14px;
 }
 
+.search__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  cursor: pointer;
+}
+
+.search__list:hover .search__menu.mega-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.search__menu.mega-menu {
+  left: 0;
+  top: 99%;
+}
+
+.search__menu.mega-menu::before {
+  left: 68px;
+}
+
+.search__item-list {
+  margin-bottom: 20px;
+}
+
+.search__item-list:last-child {
+  margin-bottom: 0;
+}
+
 .personal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -187,9 +218,111 @@ header {
           align-items: center;
 }
 
-.cart {
+.cart__block {
+  position: relative;
+}
+
+.cart__img {
   width: 32px;
   height: 29px;
+}
+
+.cart__inner {
+  padding: 20px 15px;
+  background-color: #ffffff;
+  position: absolute;
+  border-radius: 5px;
+  top: calc(100% + 16px);
+  z-index: 1;
+}
+
+.cart__item {
+  width: 230px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid rgba(237, 237, 237, 0.74);
+}
+
+.cart__label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+.cart__rating {
+  font-size: 12px;
+  color: #e4af48;
+  margin-top: 10px;
+}
+
+.cart__price-box {
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #f38191;
+  margin-top: 10px;
+}
+
+.cart__times {
+  font-size: 10px;
+}
+
+.cart__remove {
+  font-size: 16px;
+  color: #c0c0c0;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.cart__total {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cart__checkout {
+  display: block;
+  margin-top: 30px;
+  border: 1px solid #f38191;
+  text-align: center;
+  line-height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f38191;
+}
+
+.cart__checkout:hover {
+  background-color: #fffafb;
+}
+
+.cart__go-to-cart {
+  display: block;
+  line-height: 50px;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: 1px solid #eaeaea;
+  color: #4a4a4a;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.cart__go-to-cart:hover {
+  background-color: #eaeaea;
+  color: #4a4a4a;
 }
 
 .account__menu-link {
