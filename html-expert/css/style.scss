@@ -24,7 +24,7 @@ a {
 }
 
 a:hover {
-    color:$pink_color;
+    color: $pink_color;
 }
 
 body {
@@ -50,6 +50,10 @@ button {
 
 .color_white {
     color: $white_color;
+}
+
+.required {
+    color: $required_color;
 }
 
 .height_full {
@@ -116,13 +120,9 @@ header {
     align-items: center;
     padding: 0 20px;
     line-height: 38px;
+    height: 38px;
     cursor: pointer;
     transition: all 0.2s ease;
-
-    &_bordered {
-        border: 1px solid;
-        line-height: 36px;
-    }
 
     &_radius {
         border-radius: 3px;
@@ -134,7 +134,7 @@ header {
     }
 
     &_bd_grey {
-        border-color: $light_grey_color;
+        border: 1px solid $light_grey_color;
     }
 
     &__caret {
@@ -156,7 +156,7 @@ header {
     }
 
     &_pink {
-        border-color: $pink_color;
+        border: 1px solid $pink_color;
         background-color: $pink_color;
         color: $white_color;
 
@@ -176,6 +176,7 @@ header {
 
     &_big {
         line-height: 50px;
+        height: 50px;
     }
 
     &_text_big {
@@ -191,7 +192,7 @@ header {
     }
     
     &_light-pink {
-        border-color: $pink_color;
+        border: 1px solid $pink_color;
         background-color: $white_color;
         color: $pink_color;
 
@@ -202,7 +203,7 @@ header {
     }
 
     &_light-grey {
-        border-color: $light_grey_color;
+        border: 1px solid $light_grey_color;
         background-color: $white_color;
         color: $base_color;
 
@@ -213,7 +214,7 @@ header {
     }
 
     &_light-white {
-        border-color: $white_color;
+        border: 1px solid $white_color;
         background-color: transparent;
         color: $white_color;
 
@@ -225,6 +226,7 @@ header {
 
     &_atc {
         line-height: 40px;
+        height: 40px;
         padding: 0 12px;
     }
 
@@ -349,15 +351,15 @@ header {
             margin-top: 10px;
         }
     }
-}
 
-.cart-inner {
-    padding: 20px 15px;
-    background-color: $white_color;
-    position: absolute;
-    border-radius: 5px;
-    top: calc(100% + 16px);
-    z-index: 3;
+    &__inner {
+        padding: 20px 15px;
+        background-color: $white_color;
+        position: absolute;
+        border-radius: 5px;
+        top: calc(100% + 16px);
+        z-index: 3;
+    }
 }
 
 .cart-item {
@@ -397,6 +399,7 @@ header {
         font-size: 16px;
         color: $light_text_grey_color;
         align-self: center;
+        cursor: pointer;
     }
 }
 
@@ -1584,4 +1587,140 @@ input[type=number] {
 
 .subscribe_nomargin {
     margin-top: 0;
+}
+
+.checkout {
+    margin-top: 50px;
+}
+
+.checkout-item {
+    border-bottom: 1px solid $light_grey_color;
+
+    &__inner {
+        display: flex;
+        padding: 8px 35px 80px 35px;
+    }
+
+    &__left {
+        width: 280px;
+        min-width: 280px;
+        margin-right: 290px;
+    }
+
+    &__right {
+        flex-grow: 1;
+    }
+
+    &__text {
+        &_mtop {
+            margin-top: 35px;
+        }
+    }
+
+    &__heading {
+        font-size: 13px;
+        line-height: 1.2;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+
+    &__desc {
+        margin-top: 15px;
+        font-size: 13px;
+        font-weight: 400;
+        color: $light_text_grey_color;
+    }
+
+    &__choose {
+        margin-top: 30px;
+    }
+
+    &__radio {
+        margin-right: 15px;
+    }
+
+    &__radio-label {
+        font-size: 12px;
+        font-weight: 400;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        display: block;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__bullets {
+        margin-top: 35px;
+    }
+
+    &__continue-box {
+        display: flex;
+        margin-top: 40px;
+    }
+
+    &__login {
+        margin-top: 30px;
+    }
+
+    &__label {
+        font-size: 16px;
+        font-weight: 700;
+        text-transform: uppercase;
+        height: 80px;
+        line-height: 80px;
+    }
+}
+
+.bullets {
+    font-size: 13px;
+    font-weight: 400;
+    color: $light_text_grey_color;
+
+    &__item {
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    &__icon {
+        margin-right: 4px;
+    }
+}
+
+.login-form {
+    &__item {
+        margin-bottom: 22px;
+    }
+
+    &__input-label {
+        display: block;
+        font-size: 12px;
+        font-weight: 400;
+
+        &_required {
+            font-size: 17px;
+            margin-left: 2px;
+        }
+    }
+
+    &__input {
+        margin-top: 15px;
+        width: 100%;
+        height: 45px;
+        line-height: 45px;
+    }
+
+    &__required {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    &__submit-box {
+        display: flex;
+        margin-top: 30px;
+    }
 }

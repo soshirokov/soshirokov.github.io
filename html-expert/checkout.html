@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,6 +15,7 @@
         integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
     <link href="css/style.css" rel="stylesheet">
     <title>The Brand</title>
 </head>
@@ -466,248 +468,422 @@
             </ul>
         </div>
     </nav>
-    <section class="banner">
+    <nav class="page-header">
         <div class="my-container">
-            <div class="banner__text">
-                <div class="banner__headings">
-                    <h1 class="banner__heading">The Brand</h1>
-                    <h2 class="banner__subheading">of luxirous <span class="color_pink">fashion</span></h2>
+            <div class="page-header-block">
+                <h1 class="page-title">New Arrivals</h1>
+                <div class="breadcrumbs">
+                    <a href="index.html" class="breadcrumbs__item">Home</a>
+                    <a href="product.html" class="breadcrumbs__item">Men</a>
+                    <a class="breadcrumbs__item breadcrumbs__item_active">New Arrivals</a>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="offers">
+    </nav>
+    <section class="checkout">
         <div class="my-container">
-            <div class="offers__list">
-                <div class="offers__left-column">
-                    <a href="#" class="offers__link">
-                        <div class="offers__item offers__item_big offers__item_for-men">
-                            <div class="offers__text">
-                                <div class="offers__label">hot deal</div>
-                                <div class="offers__highlight color_pink">for men</div>
+            <details class="checkout-item" open>
+                <div class="checkout-item__inner">
+                    <div class="checkout-item__left">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Check as a guest or register</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__choose">
+                            <label class="checkout-item__radio-label" for="asGuest">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="asGuest">checkout as guest
+                            </label>
+                            <label class="checkout-item__radio-label" for="register">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="register">register
+                            </label>
+                        </div>
+                        <div class="checkout-item__text checkout-item__text_mtop">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="bullets checkout-item__bullets">
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Fast and
+                                easy checkout
+                            </div>
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Easy
+                                access to your order history and status
                             </div>
                         </div>
-                    </a>
-                    <a href="#" class="offers__link">
-                        <div class="offers__item offers__item_small offers__item_accesories">
-                            <div class="offers__text">
-                                <div class="offers__label">luxirous & trendy</div>
-                                <div class="offers__highlight color_pink">accesories</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="offers__right-column">
-                    <a href="#" class="offers__link">
-                        <div class="offers__item offers__item_small offers__item_women">
-                            <div class="offers__text">
-                                <div class="offers__label">30% offer</div>
-                                <div class="offers__highlight color_pink">women</div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="#" class="offers__link">
-                        <div class="offers__item offers__item_big offers__item_for-kids">
-                            <div class="offers__text">
-                                <div class="offers__label">new arrivals</div>
-                                <div class="offers__highlight color_pink">for kids</div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="fetured">
-        <div class="my-container">
-            <h2 class="fetured__heading">Fetured Items</h2>
-            <h3 class="fetured__subheading">Shop for items based on what we featured in this week</h3>
-            <div class="fetured__list">
-                <div class="fetured__item">
-                    <a href="single.html" class="fetured-item-link">
-                        <div class="fetured__item-img-part">
-                            <img src="img/item-01.jpg" alt="Mango People T-shirt" class="fetured__item-img">
-
-                        </div>
-                        <div class="fetured__description">
-                            <h4 class="fetured__item-label">Mango People T-shirt</h4>
-                            <div class="fetured__item-price color_pink">$52.00</div>
-                        </div>
-                    </a>
-                    <div class="fetured__item-atc-block"><a href="#"
-                            class="button button_light-white button_font_medium button_atc"><i
-                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
-                            Cart</a></div>
-                </div>
-                <div class="fetured__item">
-                    <a href="single.html" class="fetured__item-link">
-                        <div class="fetured__item-img-part">
-                            <img src="img/item-02.jpg" alt="Mango People T-shirt" class="fetured__item-img">
-
-                        </div>
-                        <div class="fetured__description">
-                            <h4 class="fetured__item-label">Mango People T-shirt</h4>
-                            <div class="fetured__item-price color_pink">$52.00</div>
-                        </div>
-                    </a>
-                    <div class="fetured__item-atc-block"><a href="#"
-                            class="button button_light-white button_font_medium button_atc"><i
-                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
-                            Cart</a></div>
-                </div>
-                <div class="fetured__item">
-                    <a href="single.html" class="fetured__item-link">
-                        <div class="fetured__item-img-part">
-                            <img src="img/item-03.jpg" alt="Mango People T-shirt" class="fetured__item-img">
-
-                        </div>
-                        <div class="fetured__description">
-                            <h4 class="fetured__item-label">Mango People T-shirt</h4>
-                            <div class="fetured__item-price color_pink">$52.00</div>
-                        </div>
-                    </a>
-                    <div class="fetured__item-atc-block"><a href="#"
-                            class="button button_light-white button_font_medium button_atc"><i
-                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
-                            Cart</a></div>
-                </div>
-                <div class="fetured__item">
-                    <a href="single.html" class="fetured__item-link">
-                        <div class="fetured__item-img-part">
-                            <img src="img/item-04.jpg" alt="Mango People T-shirt" class="fetured__item-img">
-
-                        </div>
-                        <div class="fetured__description">
-                            <h4 class="fetured__item-label">Mango People T-shirt</h4>
-                            <div class="fetured__item-price color_pink">$52.00</div>
-                        </div>
-                    </a>
-                    <div class="fetured__item-atc-block"><a href="#"
-                            class="button button_light-white button_font_medium button_atc"><i
-                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
-                            Cart</a></div>
-                </div>
-                <div class="fetured__item">
-                    <a href="single.html" class="fetured__item-link">
-                        <div class="fetured__item-img-part">
-                            <img src="img/item-05.jpg" alt="Mango People T-shirt" class="fetured__item-img">
-
-                        </div>
-                        <div class="fetured__description">
-                            <h4 class="fetured__item-label">Mango People T-shirt</h4>
-                            <div class="fetured__item-price color_pink">$52.00</div>
-                        </div>
-                    </a>
-                    <div class="fetured__item-atc-block"><a href="#"
-                            class="button button_light-white button_font_medium button_atc"><i
-                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
-                            Cart</a></div>
-                </div>
-                <div class="fetured__item">
-                    <a href="single.html" class="fetured__item-link">
-                        <div class="fetured__item-img-part">
-                            <img src="img/item-06.jpg" alt="Mango People T-shirt" class="fetured__item-img">
-
-                        </div>
-                        <div class="fetured__description">
-                            <h4 class="fetured__item-label">Mango People T-shirt</h4>
-                            <div class="fetured__item-price color_pink">$52.00</div>
-                        </div>
-                    </a>
-                    <div class="fetured__item-atc-block"><a href="#"
-                            class="button button_light-white button_font_medium button_atc"><i
-                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
-                            Cart</a></div>
-                </div>
-                <div class="fetured__item">
-                    <a href="single.html" class="fetured__item-link">
-                        <div class="fetured__item-img-part">
-                            <img src="img/item-07.jpg" alt="Mango People T-shirt" class="fetured__item-img">
-
-                        </div>
-                        <div class="fetured__description">
-                            <h4 class="fetured__item-label">Mango People T-shirt</h4>
-                            <div class="fetured__item-price color_pink">$52.00</div>
-                        </div>
-                    </a>
-                    <div class="fetured__item-atc-block"><a href="#"
-                            class="button button_light-white button_font_medium button_atc"><i
-                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
-                            Cart</a></div>
-                </div>
-                <div class="fetured__item">
-                    <a href="single.html" class="fetured__item-link">
-                        <div class="fetured__item-img-part">
-                            <img src="img/item-08.jpg" alt="Mango People T-shirt" class="fetured__item-img">
-
-                        </div>
-                        <div class="fetured__description">
-                            <h4 class="fetured__item-label">Mango People T-shirt</h4>
-                            <div class="fetured__item-price color_pink">$52.00</div>
-                        </div>
-                    </a>
-                    <div class="fetured__item-atc-block"><a href="#"
-                            class="button button_light-white button_font_medium button_atc"><i
-                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
-                            Cart</a></div>
-                </div>
-            </div>
-            <div class="fetured__see-all">
-                <a href="#" class="fetured__button button button_font_semibold button_pink button_big">Browse
-                    All Product<i class="fas fa-long-arrow-alt-right button__icon"></i></a>
-            </div>
-        </div>
-    </section>
-    <section class="offer">
-        <div class="my-container">
-            <div class="offer__banner">
-                <div class="offer__image">
-                    <div class="offer__headings">
-                        <div class="offer__heading">30% <span class="color_pink">offer</span></div>
-                        <div class="offer__subheading">for women</div>
-                    </div>
-                </div>
-                <div class="offer__description-block">
-                    <div class="offer__description-item">
-                        <div class="offer__description-item-icon-block">
-                            <img src="img/free_delivery.png" alt="Free Delivery" class="offer__description-item-icon">
-                        </div>
-                        <div class="offer__description-item-text-block">
-                            <div class="offer__description-item-heading">Free Delivery</div>
-                            <div class="offer__description-item-text">
-                                Worldwide delivery on all. Authorit tively morph
-                                next-generation innov tion with extensive models.
-                            </div>
+                        <div class="checkout-item__continue-box">
+                            <a href="#"
+                                class="button button_big button_light-grey button_font_semibold button_upp button_wide">Continue</a>
                         </div>
                     </div>
-                    <div class="offer__description-item">
-                        <div class="offer__description-item-icon-block">
-                            <img src="img/Sales_discounts.png" alt=" Sales & discountsy"
-                                class="offer__description-item-icon">
+                    <div class="checkout-item__right">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
                         </div>
-                        <div class="offer__description-item-text-block">
-                            <div class="offer__description-item-heading">Sales & discounts</div>
-                            <div class="offer__description-item-text">
-                                Worldwide delivery on all. Authorit tively morph
-                                next-generation innov tion with extensive models.
-                            </div>
-                        </div>
-                    </div>
-                    <div class="offer__description-item">
-                        <div class="offer__description-item-icon-block">
-                            <img src="img/quality_assurance.png" alt="Quality assurance"
-                                class="offer__description-item-icon">
-                        </div>
-                        <div class="offer__description-item-text-block">
-                            <div class="offer__description-item-heading">Quality assurance</div>
-                            <div class="offer__description-item-text">
-                                Worldwide delivery on all. Authorit tively morph
-                                next-generation innov tion with extensive models.
-                            </div>
+                        <div class="checkout-item__login">
+                            <form action="#" class="login-form">
+                                <div class="login-form__item">
+                                    <label for="loginEmail" class="login-form__input-label">EMAIL ADDRESS<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginEmail"
+                                        id="loginEmail" required>
+                                </div>
+                                <div class="login-form__item">
+                                    <label for="loginPass" class="login-form__input-label">PASSWORD<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginPass" id="loginPass"
+                                        required>
+                                </div>
+                                <div class="required login-form__required">* Required Fileds</div>
+                                <div class="login-form__submit-box">
+                                    <button type="submit"
+                                        class="button login-form__submit button_big button_light-grey button_font_semibold button_upp button_wide">Log
+                                        in</button>
+                                    <a href="" class="login-form__forgot button button_font_semibold button_big">Forgot
+                                        Password ?</a>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
-            </div>
+                <summary class="checkout-item__label">01. Shipping Adress</summary>
+            </details>
+            <details class="checkout-item">
+                <div class="checkout-item__inner">
+                    <div class="checkout-item__left">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Check as a guest or register</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__choose">
+                            <label class="checkout-item__radio-label" for="asGuest">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="asGuest">checkout as guest
+                            </label>
+                            <label class="checkout-item__radio-label" for="register">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="register">register
+                            </label>
+                        </div>
+                        <div class="checkout-item__text checkout-item__text_mtop">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="bullets checkout-item__bullets">
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Fast and
+                                easy checkout
+                            </div>
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Easy
+                                access to your order history and status
+                            </div>
+                        </div>
+                        <div class="checkout-item__continue-box">
+                            <a href="#"
+                                class="button button_big button_light-grey button_font_semibold button_upp button_wide">Continue</a>
+                        </div>
+                    </div>
+                    <div class="checkout-item__right">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__login">
+                            <form action="#" class="login-form">
+                                <div class="login-form__item">
+                                    <label for="loginEmail" class="login-form__input-label">EMAIL ADDRESS<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginEmail"
+                                        id="loginEmail" required>
+                                </div>
+                                <div class="login-form__item">
+                                    <label for="loginPass" class="login-form__input-label">PASSWORD<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginPass" id="loginPass"
+                                        required>
+                                </div>
+                                <div class="required login-form__required">* Required Fileds</div>
+                                <div class="login-form__submit-box">
+                                    <button type="submit"
+                                        class="button login-form__submit button_big button_light-grey button_font_semibold button_upp button_wide">Log
+                                        in</button>
+                                    <a href="" class="login-form__forgot button button_font_semibold button_big">Forgot
+                                        Password ?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <summary class="checkout-item__label">02. BILLING INFORMATION</summary>
+            </details>
+            <details class="checkout-item">
+                <div class="checkout-item__inner">
+                    <div class="checkout-item__left">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Check as a guest or register</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__choose">
+                            <label class="checkout-item__radio-label" for="asGuest">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="asGuest">checkout as guest
+                            </label>
+                            <label class="checkout-item__radio-label" for="register">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="register">register
+                            </label>
+                        </div>
+                        <div class="checkout-item__text checkout-item__text_mtop">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="bullets checkout-item__bullets">
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Fast and
+                                easy checkout
+                            </div>
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Easy
+                                access to your order history and status
+                            </div>
+                        </div>
+                        <div class="checkout-item__continue-box">
+                            <a href="#"
+                                class="button button_big button_light-grey button_font_semibold button_upp button_wide">Continue</a>
+                        </div>
+                    </div>
+                    <div class="checkout-item__right">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__login">
+                            <form action="#" class="login-form">
+                                <div class="login-form__item">
+                                    <label for="loginEmail" class="login-form__input-label">EMAIL ADDRESS<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginEmail"
+                                        id="loginEmail" required>
+                                </div>
+                                <div class="login-form__item">
+                                    <label for="loginPass" class="login-form__input-label">PASSWORD<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginPass" id="loginPass"
+                                        required>
+                                </div>
+                                <div class="required login-form__required">* Required Fileds</div>
+                                <div class="login-form__submit-box">
+                                    <button type="submit"
+                                        class="button login-form__submit button_big button_light-grey button_font_semibold button_upp button_wide">Log
+                                        in</button>
+                                    <a href="" class="login-form__forgot button button_font_semibold button_big">Forgot
+                                        Password ?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <summary class="checkout-item__label">03. SHIPPING INFORMATION</summary>
+            </details>
+            <details class="checkout-item">
+                <div class="checkout-item__inner">
+                    <div class="checkout-item__left">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Check as a guest or register</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__choose">
+                            <label class="checkout-item__radio-label" for="asGuest">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="asGuest">checkout as guest
+                            </label>
+                            <label class="checkout-item__radio-label" for="register">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="register">register
+                            </label>
+                        </div>
+                        <div class="checkout-item__text checkout-item__text_mtop">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="bullets checkout-item__bullets">
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Fast and
+                                easy checkout
+                            </div>
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Easy
+                                access to your order history and status
+                            </div>
+                        </div>
+                        <div class="checkout-item__continue-box">
+                            <a href="#"
+                                class="button button_big button_light-grey button_font_semibold button_upp button_wide">Continue</a>
+                        </div>
+                    </div>
+                    <div class="checkout-item__right">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__login">
+                            <form action="#" class="login-form">
+                                <div class="login-form__item">
+                                    <label for="loginEmail" class="login-form__input-label">EMAIL ADDRESS<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginEmail"
+                                        id="loginEmail" required>
+                                </div>
+                                <div class="login-form__item">
+                                    <label for="loginPass" class="login-form__input-label">PASSWORD<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginPass" id="loginPass"
+                                        required>
+                                </div>
+                                <div class="required login-form__required">* Required Fileds</div>
+                                <div class="login-form__submit-box">
+                                    <button type="submit"
+                                        class="button login-form__submit button_big button_light-grey button_font_semibold button_upp button_wide">Log
+                                        in</button>
+                                    <a href="" class="login-form__forgot button button_font_semibold button_big">Forgot
+                                        Password ?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <summary class="checkout-item__label">04. SHIPPING METHOD</summary>
+            </details>
+            <details class="checkout-item">
+                <div class="checkout-item__inner">
+                    <div class="checkout-item__left">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Check as a guest or register</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__choose">
+                            <label class="checkout-item__radio-label" for="asGuest">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="asGuest">checkout as guest
+                            </label>
+                            <label class="checkout-item__radio-label" for="register">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="register">register
+                            </label>
+                        </div>
+                        <div class="checkout-item__text checkout-item__text_mtop">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="bullets checkout-item__bullets">
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Fast and
+                                easy checkout
+                            </div>
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Easy
+                                access to your order history and status
+                            </div>
+                        </div>
+                        <div class="checkout-item__continue-box">
+                            <a href="#"
+                                class="button button_big button_light-grey button_font_semibold button_upp button_wide">Continue</a>
+                        </div>
+                    </div>
+                    <div class="checkout-item__right">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__login">
+                            <form action="#" class="login-form">
+                                <div class="login-form__item">
+                                    <label for="loginEmail" class="login-form__input-label">EMAIL ADDRESS<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginEmail"
+                                        id="loginEmail" required>
+                                </div>
+                                <div class="login-form__item">
+                                    <label for="loginPass" class="login-form__input-label">PASSWORD<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginPass" id="loginPass"
+                                        required>
+                                </div>
+                                <div class="required login-form__required">* Required Fileds</div>
+                                <div class="login-form__submit-box">
+                                    <button type="submit"
+                                        class="button login-form__submit button_big button_light-grey button_font_semibold button_upp button_wide">Log
+                                        in</button>
+                                    <a href="" class="login-form__forgot button button_font_semibold button_big">Forgot
+                                        Password ?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <summary class="checkout-item__label">05. PAYMENT METHOD</summary>
+            </details>
+            <details class="checkout-item">
+                <div class="checkout-item__inner">
+                    <div class="checkout-item__left">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Check as a guest or register</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__choose">
+                            <label class="checkout-item__radio-label" for="asGuest">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="asGuest">checkout as guest
+                            </label>
+                            <label class="checkout-item__radio-label" for="register">
+                                <input class="checkout-item__radio" type="radio" name="typeOfRegister"
+                                    id="register">register
+                            </label>
+                        </div>
+                        <div class="checkout-item__text checkout-item__text_mtop">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="bullets checkout-item__bullets">
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Fast and
+                                easy checkout
+                            </div>
+                            <div class="bullets__item"><i class="fas fa-angle-double-right bullets__icon"></i>Easy
+                                access to your order history and status
+                            </div>
+                        </div>
+                        <div class="checkout-item__continue-box">
+                            <a href="#"
+                                class="button button_big button_light-grey button_font_semibold button_upp button_wide">Continue</a>
+                        </div>
+                    </div>
+                    <div class="checkout-item__right">
+                        <div class="checkout-item__text">
+                            <div class="checkout-item__heading">Register and save time!</div>
+                            <div class="checkout-item__desc">Register with us for future convenience</div>
+                        </div>
+                        <div class="checkout-item__login">
+                            <form action="#" class="login-form">
+                                <div class="login-form__item">
+                                    <label for="loginEmail" class="login-form__input-label">EMAIL ADDRESS<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginEmail"
+                                        id="loginEmail" required>
+                                </div>
+                                <div class="login-form__item">
+                                    <label for="loginPass" class="login-form__input-label">PASSWORD<span
+                                            class="required login-form__input-label_required">*</span></label>
+                                    <input class="input login-form__input" type="email" name="loginPass" id="loginPass"
+                                        required>
+                                </div>
+                                <div class="required login-form__required">* Required Fileds</div>
+                                <div class="login-form__submit-box">
+                                    <button type="submit"
+                                        class="button login-form__submit button_big button_light-grey button_font_semibold button_upp button_wide">Log
+                                        in</button>
+                                    <a href="" class="login-form__forgot button button_font_semibold button_big">Forgot
+                                        Password ?</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <summary class="checkout-item__label">06. ORDER REVIEW</summary>
+            </details>
         </div>
     </section>
     <section class="subscribe">
@@ -823,6 +999,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
