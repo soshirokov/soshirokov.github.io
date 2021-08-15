@@ -24,19 +24,18 @@
             <div class="header">
                 <div class="brand">
                     <a href="index.html" class="logo">
-                        <div class="logo__image">
-                            <img src="img/logo.png" alt="The Brand">
+                        <img src="img/logo.png" alt="The Brand" class="logo__image">
+                        <div class="site-name logo__site-name">Bran<span class="site-name_bold site-name_pink">d</span>
                         </div>
-                        <div class="logo__text">Bran<span class="color_pink weight_bold">d</span></div>
                     </a>
                     <div class="search">
-                        <form class="search__form" action="#">
-                            <div class="search__list">
-                                <span>Browse</span>
-                                <span class="search__caret"><i class="fas fa-caret-down"></i></span>
-                                <div class="search__menu mega-menu">
+                        <div class="search__form">
+                            <div
+                                class="button button_bordered button_bd_grey button_grey search__button search__button_radius_left">
+                                Browse<i class="fas fa-caret-down button__caret icon caret_grey"></i>
+                                <div class="search__mega-menu mega-menu">
                                     <div class="mega-menu__item">
-                                        <div class="search__item-list mega-menu__list">
+                                        <div class="mega-menu__list mega-menu__list_margin-bottom">
                                             <div class="mega-menu__heading">Women</div>
                                             <a href="product.html" class="mega-menu__link">Dresses</a>
                                             <a href="product.html" class="mega-menu__link">Tops</a>
@@ -48,7 +47,7 @@
                                             <a href="product.html" class="mega-menu__link">Skirts/Shorts</a>
                                             <a href="product.html" class="mega-menu__link">Accessories</a>
                                         </div>
-                                        <div class="search__item-list mega-menu__list">
+                                        <div class="mega-menu__list mega-menu__list_margin-bottom">
                                             <div class="mega-menu__heading">Men</div>
                                             <a href="product.html" class="mega-menu__link">Dresses</a>
                                             <a href="product.html" class="mega-menu__link">Tops</a>
@@ -57,71 +56,76 @@
                                     </div>
                                 </div>
                             </div>
-                            <input id="search" class="search__input" placeholder="Search for Item...">
-
-                            <button class="search__submit" type="submit"><i class="fas fa-search"></i></button>
-                        </form>
+                            <form class="form_flex" action="#">
+                                <input id="search" class="input search__input search__input_in-search"
+                                    placeholder="Search for Item...">
+                                <button
+                                    class="button button_iconed button_submit search__button_radius_right search__button_in-search button_bordered button_bd_grey"
+                                    type="submit"><i class="fas fa-search icon_grey"></i></button>
+                            </form>
+                        </div>
                     </div>
                 </div>
                 <div class="personal">
-                    <div class="cart">
-                        <details class="cart__block">
-                            <div class="cart__inner">
-                                <div class="cart__item">
-                                    <img src="img/cart_item_1.jpg" alt="Rebox Zane" class="cart__item-img">
-                                    <div class="cart__item-details">
-                                        <div class="cart__label">Rebox Zane</div>
-                                        <div class="cart__rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-                                        <div class="cart__price-box">
-                                            <span class="cart__quantity">1</span>
-                                            <span class="cart__times"> x </span>
-                                            <span class="cart__price">$250</span>
-                                        </div>
+                    <details class="cart">
+                        <div class="cart-inner">
+                            <div class="cart-item">
+                                <img src="img/cart_item_1.jpg" alt="Rebox Zane" class="cart-item__img">
+                                <div class="cart-item__details">
+                                    <div class="cart-item__label">Rebox Zane</div>
+                                    <div class="cart-item__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
                                     </div>
-                                    <div class="cart__remove">
-                                        <i class="fas fa-times-circle"></i>
+                                    <div class="cart-item__price-box">
+                                        <span class="cart-item__quantity">1</span>
+                                        <span class="cart-item__times"> x </span>
+                                        <span class="cart-item__price">$250</span>
                                     </div>
                                 </div>
-                                <div class="cart__item">
-                                    <img src="img/cart_item_2.jpg" alt="Rebox Zane" class="cart__item-img">
-                                    <div class="cart__item-details">
-                                        <div class="cart__label">Rebox Zane</div>
-                                        <div class="cart__rating">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-                                        <div class="cart__price-box">
-                                            <span class="cart__quantity">1</span>
-                                            <span class="cart__times"> x </span>
-                                            <span class="cart__price">$250</span>
-                                        </div>
-                                    </div>
-                                    <div class="cart__remove">
-                                        <i class="fas fa-times-circle"></i>
-                                    </div>
+                                <div class="cart-item__remove">
+                                    <i class="fas fa-times-circle"></i>
                                 </div>
-                                <div class="cart__total">
-                                    <span class="cart__total-label">TOTAL</span>
-                                    <span class="cart__total__valuer">$500.00</span>
-                                </div>
-                                <a href="#" class="cart__checkout">Checkout</a>
-                                <a href="#" class="cart__go-to-cart">Go to cart</a>
                             </div>
-                            <summary class="cart__img"><img src="img/cart.png" alt="Cart"></summary>
-                        </details>
-                    </div>
+                            <div class="cart-item">
+                                <img src="img/cart_item_2.jpg" alt="Rebox Zane" class="cart-item__img">
+                                <div class="cart-item__details">
+                                    <div class="cart-item__label">Rebox Zane</div>
+                                    <div class="cart-item__rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="cart-item__price-box">
+                                        <span class="cart-item__quantity">1</span>
+                                        <span class="cart-item__times"> x </span>
+                                        <span class="cart-item__price">$250</span>
+                                    </div>
+                                </div>
+                                <div class="cart-item__remove">
+                                    <i class="fas fa-times-circle"></i>
+                                </div>
+                            </div>
+                            <div class="cart-total">
+                                <span class="cart-total__label">TOTAL</span>
+                                <span class="cart-total__value">$500.00</span>
+                            </div>
+                            <a href="#"
+                                class="button button_big button_upp button_light-pink button_font_semibold button_bordered cart__button">Checkout</a>
+                            <a href="#"
+                                class="button button_big button_upp button_light-grey button_font_semibold button_bordered cart__button_second">Go
+                                to cart</a>
+                        </div>
+                        <summary><i class="fas fa-shopping-cart icon_cart"></i></summary>
+                    </details>
                     <div class="account">
-                        <a href="#" class="account__menu-link">
-                            My Account<span class="account__caret"><i class="fas fa-caret-down"></i></span>
+                        <a href="#" class="account__button button button_pink button_bordered button_font_medium">
+                            My Account</span>
                         </a>
                     </div>
                 </div>
@@ -574,8 +578,10 @@
                                 </div>
                             </div>
                         </div>
-                        <button type="submit" class="product__atc-link"><img src="img/add_to_cart_pink.png"
-                                alt="Add to cart" class="product__atc-img">Add to Cart</button>
+                        <button type="submit"
+                            class="button button_submit button_font_semibold button_text_big button_big button_light-pink button_bordered product__button"><i
+                                class="fas fa-cart-plus icon_atc-big product__atc-icon"></i>Add to
+                            Cart</button>
                     </form>
                 </div>
             </div>
@@ -586,7 +592,7 @@
             <h2 class="up-sale__heading">you may like also</h2>
             <div class="fetured__list up-sale__list">
                 <div class="fetured__item">
-                    <a href="single.html" class="feture-item-link">
+                    <a href="single.html" class="fetured-item-link">
                         <div class="fetured__item-img-part">
                             <img src="img/item-01.jpg" alt="Mango People T-shirt" class="fetured__item-img">
 
@@ -596,12 +602,13 @@
                             <div class="fetured__item-price color_pink">$52.00</div>
                         </div>
                     </a>
-                    <div class="fetured__item-atc-block"><a href="#" class="fetured__item-atc"><img src="img/atc.png"
-                                alt="Add to Cart" class="fetured__atc-img">Add to
+                    <div class="fetured__item-atc-block"><a href="#"
+                            class="button button_light-white button_bordered button_font_medium button_atc"><i
+                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
                             Cart</a></div>
                 </div>
                 <div class="fetured__item">
-                    <a href="single.html" class="feture-item-link">
+                    <a href="single.html" class="fetured__item-link">
                         <div class="fetured__item-img-part">
                             <img src="img/item-02.jpg" alt="Mango People T-shirt" class="fetured__item-img">
 
@@ -611,36 +618,41 @@
                             <div class="fetured__item-price color_pink">$52.00</div>
                         </div>
                     </a>
-                    <div class="fetured__item-atc-block"><a href="#" class="fetured__item-atc"><img src="img/atc.png"
-                                alt="Add to Cart" class="fetured__atc-img">Add to
+                    <div class="fetured__item-atc-block"><a href="#"
+                            class="button button_light-white button_bordered button_font_medium button_atc"><i
+                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
                             Cart</a></div>
                 </div>
                 <div class="fetured__item">
-                    <a href="single.html" class="feture-item-link">
+                    <a href="single.html" class="fetured__item-link">
                         <div class="fetured__item-img-part">
                             <img src="img/item-03.jpg" alt="Mango People T-shirt" class="fetured__item-img">
+
                         </div>
                         <div class="fetured__description">
                             <h4 class="fetured__item-label">Mango People T-shirt</h4>
                             <div class="fetured__item-price color_pink">$52.00</div>
                         </div>
                     </a>
-                    <div class="fetured__item-atc-block"><a href="#" class="fetured__item-atc"><img src="img/atc.png"
-                                alt="Add to Cart" class="fetured__atc-img">Add to
+                    <div class="fetured__item-atc-block"><a href="#"
+                            class="button button_light-white button_bordered button_font_medium button_atc"><i
+                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
                             Cart</a></div>
                 </div>
                 <div class="fetured__item">
-                    <a href="single.html" class="feture-item-link">
+                    <a href="single.html" class="fetured__item-link">
                         <div class="fetured__item-img-part">
                             <img src="img/item-04.jpg" alt="Mango People T-shirt" class="fetured__item-img">
+
                         </div>
                         <div class="fetured__description">
                             <h4 class="fetured__item-label">Mango People T-shirt</h4>
                             <div class="fetured__item-price color_pink">$52.00</div>
                         </div>
                     </a>
-                    <div class="fetured__item-atc-block"><a href="#" class="fetured__item-atc"><img src="img/atc.png"
-                                alt="Add to Cart" class="fetured__atc-img">Add to
+                    <div class="fetured__item-atc-block"><a href="#"
+                            class="button button_light-white button_bordered button_font_medium button_atc"><i
+                                class="fas fa-cart-plus icon_atc fetured__atc-icon"></i>Add to
                             Cart</a></div>
                 </div>
             </div>
@@ -687,10 +699,10 @@
                 <div class="footer-content-block">
                     <div class="about">
                         <a href="index.html" class="logo">
-                            <div class="logo__image">
-                                <img src="img/logo.png" alt="The Brand">
+                            <img src="img/logo.png" alt="The Brand" class="logo__image">
+                            <div class="site-name logo__site-name">Bran<span
+                                    class="site-name_bold site-name_pink">d</span>
                             </div>
-                            <div class="logo__text">Bran<span class="color_pink weight_bold">d</span></div>
                         </a>
                         <div class="about__text">
                             Objectively transition extensive data rather than cross functional solutions. Monotonectally
@@ -741,11 +753,16 @@
                 <div class="footer-bootom-block">
                     <div class="copyright">© 2017 Brand All Rights Reserved.</div>
                     <div class="socials">
-                        <a href="#" class="socials__link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="socials__link"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="socials__link"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="socials__link"><i class="fab fa-pinterest-p"></i></a>
-                        <a href="#" class="socials__link"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="button button_font_medium button_social socials__button"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="button button_font_medium button_social socials__button"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="button button_font_medium button_social socials__button"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="button button_font_medium button_social socials__button"><i
+                                class="fab fa-pinterest-p"></i></a>
+                        <a href="#" class="button button_font_medium button_social socials__button"><i
+                                class="fab fa-google-plus-g"></i></a>
                     </div>
                 </div>
             </div>
