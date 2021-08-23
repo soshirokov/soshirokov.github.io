@@ -434,7 +434,7 @@ select {
   position: absolute;
   border-radius: 5px;
   top: calc(100% + 16px);
-  z-index: 3;
+  z-index: 5;
 }
 
 .cart-item {
@@ -1557,6 +1557,10 @@ input[type=number] {
   margin-bottom: 20px;
 }
 
+.sidebar-filter:last-child {
+  margin-bottom: 0;
+}
+
 .sidebar-filter__name {
   line-height: 37px;
   font-weight: 700;
@@ -1616,18 +1620,30 @@ input[type=number] {
   color: #646464;
 }
 
-.top-filter__link::after {
+.top-filter__tranding {
+  cursor: pointer;
+}
+
+.top-filter__tranding::after {
   content: "|";
   color: #e6e6e6;
   margin: 0 12px;
 }
 
-.top-filter__link:nth-child(3n+3)::after {
+.top-filter__tranding:nth-child(3n+3)::after {
   content: "";
 }
 
-.top-filter__link:last-child::after {
+.top-filter__tranding:last-child::after {
   content: "";
+}
+
+.top-filter__hidden-input {
+  display: none;
+}
+
+.top-filter__hidden-input:checked + label {
+  color: #f38191;
 }
 
 .top-filter__check-label {
@@ -1825,7 +1841,7 @@ input[type=number] {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 341px;
+  min-height: 341px;
 }
 
 .feature-box__item {
@@ -1841,7 +1857,7 @@ input[type=number] {
 }
 
 .feature-box__desc {
-  margin-top: 12px;
+  margin-top: 17px;
   line-height: 24px;
 }
 
@@ -2195,6 +2211,9 @@ input[type=number] {
 
 /* Tablet */
 @media screen and (max-width: 1140px) {
+  .hide-desctop {
+    display: block;
+  }
   .my-container {
     padding: 0 20px;
   }
@@ -2360,13 +2379,73 @@ input[type=number] {
   .carousel.slide {
     height: auto;
   }
+  .top-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .top-filter__right-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .top-filter__item {
+    width: auto;
+  }
+  .top-filter__label-icon {
+    margin-left: 10px;
+  }
+  .top-filter__label {
+    z-index: 2;
+  }
+  .top-filter__accordion {
+    position: relative;
+    padding: 0 16px;
+    z-index: 3;
+  }
+  .top-filter__accordion[open] {
+    z-index: 5;
+  }
+  .top-filter__accordion[open] summary {
+    color: #f38191;
+  }
+  .top-filter__accordion[open] summary svg path {
+    fill: #f38191;
+  }
+  .top-filter__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: #ffffff;
+    -webkit-box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    padding: 45px 16px 16px 16px;
+    min-width: 100%;
+  }
+  .top-filter__inner_right {
+    right: 0;
+    left: auto;
+  }
+  .top-filter__choose-box {
+    margin-top: 0;
+  }
+  .top-filter__tranding {
+    display: block;
+  }
+  .top-filter__tranding::after {
+    display: none;
+  }
+  .top-filter__check-label {
+    margin-right: 0;
+  }
+  .hide-tablet {
+    display: none;
+  }
 }
 
 /* Phone */
 @media screen and (max-width: 768px) {
-  .hide-phone {
-    display: none;
-  }
   .hide-desctop {
     display: block;
   }
@@ -2419,7 +2498,7 @@ input[type=number] {
     position: absolute;
     width: 100%;
     background: #fff;
-    z-index: 3;
+    z-index: 5;
   }
   .menu__box:hover .menu__bars {
     border-bottom: 1px solid #e6e6e6;
@@ -2574,6 +2653,43 @@ input[type=number] {
   }
   .checkout-item__right {
     margin-bottom: 50px;
+  }
+  .top-filter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .top-filter__label-icon {
+    margin-left: 0;
+  }
+  .pagination-block__menu {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .pagination-block__pages {
+    margin-bottom: 20px;
+  }
+  .feature-box__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 50px 35px;
+  }
+  .feature-box__item {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+  .feature-box__item:last-child {
+    margin-bottom: 0;
+  }
+  .hide-phone {
+    display: none;
+  }
+  .hide-tablet {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

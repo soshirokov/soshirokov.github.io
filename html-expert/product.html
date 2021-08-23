@@ -497,7 +497,7 @@
     <section class="catalog">
         <div class="my-container">
             <div class="catalog-block">
-                <div class="sidebar">
+                <div class="sidebar hide-tablet">
                     <details class="sidebar-filter">
                         <div class="sidebar-filter__list">
                             <a href="#" class="sidebar-filter__link">Accessories</a>
@@ -557,16 +557,28 @@
                     </details>
                 </div>
                 <div class="product-list">
-                    <div class="top-filter">
+                    <div class="top-filter hide-tablet">
                         <div class="top-filter__item">
                             <div class="top-filter__label">Trending now</div>
                             <div class="top-filter__choose-box">
-                                <a href="#" class="top-filter__link">Bohemian</a>
-                                <a href="#" class="top-filter__link">Floral</a>
-                                <a href="#" class="top-filter__link">Lace</a>
-                                <a href="#" class="top-filter__link">Floral</a>
-                                <a href="#" class="top-filter__link">Lace</a>
-                                <a href="#" class="top-filter__link">Bohemian</a>
+                                <input type="checkbox" name="trending" id="Bohemian1" value="Bohemian"
+                                    class="top-filter__hidden-input"><label for="Bohemian1"
+                                    class="top-filter__tranding">Bohemian</label>
+                                <input type="checkbox" name="trending" id="Floral1" value="Floral"
+                                    class="top-filter__hidden-input"><label for="Floral1"
+                                    class="top-filter__tranding">Floral</label>
+                                <input type="checkbox" name="trending" id="Lace1" value="Lace"
+                                    class="top-filter__hidden-input"><label for="Lace1"
+                                    class="top-filter__tranding">Lace</label>
+                                <input type="checkbox" name="trending" id="Floral2" value="Floral"
+                                    class="top-filter__hidden-input"><label for="Floral2"
+                                    class="top-filter__tranding">Floral</label>
+                                <input type="checkbox" name="trending" id="Lace2" value="Lace"
+                                    class="top-filter__hidden-input"><label for="Lace2"
+                                    class="top-filter__tranding">Lace</label>
+                                <input type="checkbox" name="trending" id="Bohemian2" value="Bohemian"
+                                    class="top-filter__hidden-input"><label for="Bohemian2"
+                                    class="top-filter__tranding">Bohemian</label>
                             </div>
                         </div>
                         <div class="top-filter__item">
@@ -607,6 +619,157 @@
                                             name="priceEnd" type="text" value="0$">
                                     </div>
                                 </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-filter hide-desctop">
+                        <div class="top-filter__item">
+                            <details class="top-filter__accordion">
+                                <div class="top-filter__inner">
+                                    <details class="sidebar-filter">
+                                        <div class="sidebar-filter__list">
+                                            <a href="#" class="sidebar-filter__link">Accessories</a>
+                                            <a href="#" class="sidebar-filter__link">Bags</a>
+                                            <a href="#" class="sidebar-filter__link">Denim</a>
+                                            <a href="#" class="sidebar-filter__link">Hoodies & Sweatshirts</a>
+                                            <a href="#" class="sidebar-filter__link">Jackets & Coats</a>
+                                            <a href="#" class="sidebar-filter__link">Pants</a>
+                                            <a href="#" class="sidebar-filter__link">Polos</a>
+                                            <a href="#" class="sidebar-filter__link">Shirts</a>
+                                            <a href="#" class="sidebar-filter__link">Shoes</a>
+                                            <a href="#" class="sidebar-filter__link">Shorts</a>
+                                            <a href="#" class="sidebar-filter__link">Sweaters & Knits</a>
+                                            <a href="#" class="sidebar-filter__link">T-Shirts</a>
+                                            <a href="#" class="sidebar-filter__link">Tanks</a>
+                                        </div>
+                                        <summary class="sidebar-filter__name">Category<span
+                                                class="sidebar-filter__caret"><i class="fas fa-caret-down"></i></span>
+                                        </summary>
+                                    </details>
+                                    <details class="sidebar-filter">
+                                        <div class="sidebar-filter__list">
+                                            <a href="#" class="sidebar-filter__link">Accessories</a>
+                                            <a href="#" class="sidebar-filter__link">Bags</a>
+                                            <a href="#" class="sidebar-filter__link">Denim</a>
+                                            <a href="#" class="sidebar-filter__link">Hoodies & Sweatshirts</a>
+                                            <a href="#" class="sidebar-filter__link">Jackets & Coats</a>
+                                            <a href="#" class="sidebar-filter__link">Pants</a>
+                                            <a href="#" class="sidebar-filter__link">Polos</a>
+                                            <a href="#" class="sidebar-filter__link">Shirts</a>
+                                            <a href="#" class="sidebar-filter__link">Shoes</a>
+                                            <a href="#" class="sidebar-filter__link">Shorts</a>
+                                            <a href="#" class="sidebar-filter__link">Sweaters & Knits</a>
+                                            <a href="#" class="sidebar-filter__link">T-Shirts</a>
+                                            <a href="#" class="sidebar-filter__link">Tanks</a>
+                                        </div>
+                                        <summary class="sidebar-filter__name">Brand<span
+                                                class="sidebar-filter__caret"><i class="fas fa-caret-down"></i></span>
+                                        </summary>
+                                    </details>
+                                    <details class="sidebar-filter">
+                                        <div class="sidebar-filter__list">
+                                            <a href="#" class="sidebar-filter__link">Accessories</a>
+                                            <a href="#" class="sidebar-filter__link">Bags</a>
+                                            <a href="#" class="sidebar-filter__link">Denim</a>
+                                            <a href="#" class="sidebar-filter__link">Hoodies & Sweatshirts</a>
+                                            <a href="#" class="sidebar-filter__link">Jackets & Coats</a>
+                                            <a href="#" class="sidebar-filter__link">Pants</a>
+                                            <a href="#" class="sidebar-filter__link">Polos</a>
+                                            <a href="#" class="sidebar-filter__link">Shirts</a>
+                                            <a href="#" class="sidebar-filter__link">Shoes</a>
+                                            <a href="#" class="sidebar-filter__link">Shorts</a>
+                                            <a href="#" class="sidebar-filter__link">Sweaters & Knits</a>
+                                            <a href="#" class="sidebar-filter__link">T-Shirts</a>
+                                            <a href="#" class="sidebar-filter__link">Tanks</a>
+                                        </div>
+                                        <summary class="sidebar-filter__name">Designer<span
+                                                class="sidebar-filter__caret"><i class="fas fa-caret-down"></i></span>
+                                        </summary>
+                                    </details>
+                                </div>
+                                <summary class="top-filter__label"><span class="hide-phone">Filter</span><svg width="15"
+                                        height="10" viewBox="0 0 15 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                        class="top-filter__label-icon">
+                                        <path
+                                            d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z"
+                                            fill="black" />
+                                    </svg>
+                                </summary>
+                            </details>
+                        </div>
+                        <div class="top-filter__right-side">
+                            <div class="top-filter__item">
+                                <details class="top-filter__accordion">
+                                    <div class="top-filter__choose-box top-filter__inner top-filter__inner_right">
+                                        <input type="checkbox" name="trending" id="Bohemian3" value="Bohemian"
+                                            class="top-filter__hidden-input"><label for="Bohemian3"
+                                            class="top-filter__tranding">Bohemian</label>
+                                        <input type="checkbox" name="trending" id="Floral3" value="Floral"
+                                            class="top-filter__hidden-input"><label for="Floral3"
+                                            class="top-filter__tranding">Floral</label>
+                                        <input type="checkbox" name="trending" id="Lace3" value="Lace"
+                                            class="top-filter__hidden-input"><label for="Lace3"
+                                            class="top-filter__tranding">Lace</label>
+                                        <input type="checkbox" name="trending" id="Floral4" value="Floral"
+                                            class="top-filter__hidden-input"><label for="Floral4"
+                                            class="top-filter__tranding">Floral</label>
+                                        <input type="checkbox" name="trending" id="Lace4" value="Lace"
+                                            class="top-filter__hidden-input"><label for="Lace4"
+                                            class="top-filter__tranding">Lace</label>
+                                        <input type="checkbox" name="trending" id="Bohemian4" value="Bohemian"
+                                            class="top-filter__hidden-input"><label for="Bohemian4"
+                                            class="top-filter__tranding">Bohemian</label>
+                                    </div>
+                                    <summary class="top-filter__label">Trending now <i
+                                            class="fas fa-caret-down top-filter__label-icon"></i>
+                                    </summary>
+                                </details>
+                            </div>
+                            <div class="top-filter__item">
+                                <details class="top-filter__accordion">
+                                    <div class="top-filter__choose-box top-filter__inner top-filter__inner_right">
+                                        <label for="XXS" class="top-filter__check-label">
+                                            <input type="checkbox" name="size" id="XXS" class="top-filter__check">XXS
+                                        </label>
+                                        <label for="XS" class="top-filter__check-label">
+                                            <input type="checkbox" name="size" id="XS" class="top-filter__check">XS
+                                        </label>
+                                        <label for="S" class="top-filter__check-label">
+                                            <input type="checkbox" name="size" id="S" class="top-filter__check">S
+                                        </label>
+                                        <label for="M" class="top-filter__check-label">
+                                            <input type="checkbox" name="size" id="M" class="top-filter__check">M
+                                        </label>
+                                        <label for="L" class="top-filter__check-label">
+                                            <input type="checkbox" name="size" id="L" class="top-filter__check">L
+                                        </label>
+                                        <label for="XL" class="top-filter__check-label">
+                                            <input type="checkbox" name="size" id="XL" class="top-filter__check">XL
+                                        </label>
+                                        <label for="XXL" class="top-filter__check-label">
+                                            <input type="checkbox" name="size" id="XXL" class="top-filter__check">XXL
+                                        </label>
+                                    </div>
+                                    <summary class="top-filter__label">Size <i
+                                            class="fas fa-caret-down top-filter__label-icon"></i></summary>
+                                </details>
+                            </div>
+                            <div class="top-filter__item">
+                                <details class="top-filter__accordion">
+                                    <div class="top-filter__choose-box top-filter__inner top-filter__inner_right">
+                                        <div class="price-range">
+                                            <div id="slider-range-mobile" class="price-range__control"></div>
+                                            <div class="price-range__results">
+                                                <input class="price-range__result" id="priceStart-mobile"
+                                                    name="priceStart" type="text" value="0$">
+                                                <input class="price-range__result price-range__result_right"
+                                                    id="priceEnd-mobile" name="priceEnd" type="text" value="0$">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <summary class="top-filter__label">Price <i
+                                            class="fas fa-caret-down top-filter__label-icon"></i></summary>
+                                </details>
                             </div>
                         </div>
                     </div>
