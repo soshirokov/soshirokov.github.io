@@ -879,7 +879,7 @@ select {
 .offer__image {
   background-image: url(../img/offer.jpg);
   min-width: 767px;
-  height: 529px;
+  min-height: 529px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -948,7 +948,7 @@ select {
 }
 
 .subscribe {
-  min-height: 438px;
+  height: 438px;
   background-image: url(../img/subscribe-background.jpg);
   background-size: cover;
   background-position: 50% 50%;
@@ -1091,10 +1091,17 @@ select {
   height: 48px;
   background-color: #f38191;
   border-radius: 0px 23px 23px 0px;
-  border: none;
+  border: 1px solid #f38191;
   color: #ffffff;
   font-weight: 400;
   font-size: 14px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.subscribe-form__button:hover {
+  background: #ffffff;
+  color: #f38191;
 }
 
 .footer-content-block {
@@ -2209,6 +2216,10 @@ input[type=number] {
   display: none;
 }
 
+.hide-tablet {
+  display: none;
+}
+
 /* Tablet */
 @media screen and (max-width: 1140px) {
   .hide-desctop {
@@ -2258,6 +2269,10 @@ input[type=number] {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+  .subscribe {
+    min-height: 438px;
+    height: auto;
   }
   .subscribe__block {
     -webkit-box-orient: vertical;
@@ -2445,29 +2460,53 @@ input[type=number] {
 }
 
 /* Phone */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .hide-desctop {
     display: block;
   }
-  .search__input {
-    border: 1px solid #e6e6e6;
-    width: 100px;
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .brand {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .form_flex {
+    width: 100%;
+  }
+  .search {
+    margin-top: 20px;
+    width: 100%;
   }
   .search__form {
-    margin-left: 20px;
+    margin-left: 0;
+    width: 100%;
   }
-  .account__button {
-    margin-left: 15px;
+  .search__input {
+    width: 100%;
   }
-  .account__button_small {
-    padding: 0;
-    width: 38px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  .personal {
+    margin-top: 20px;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .cart__inner {
+    left: 0;
+    right: auto;
   }
   .menu__list {
     height: 0;
@@ -2528,6 +2567,15 @@ input[type=number] {
   }
   .offers__item {
     padding-top: 230px;
+  }
+  .fetured__item {
+    width: 100%;
+  }
+  .fetured__item-img {
+    width: 100%;
+  }
+  .fetured__item-atc-block {
+    top: 200px;
   }
   .offer__banner {
     margin: 100px -20px 0 -20px;

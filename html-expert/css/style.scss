@@ -784,7 +784,7 @@ select {
     &__image {
         background-image: url(../img/offer.jpg);
         min-width: 767px;
-        height: 529px;
+        min-height: 529px;
         display: flex;
     }
     
@@ -837,7 +837,7 @@ select {
 }
 
 .subscribe {
-    min-height: 438px;
+    height: 438px;
     background-image: url(../img/subscribe-background.jpg);
     background-size: cover;
     background-position: 50% 50%;
@@ -956,10 +956,16 @@ select {
         height: 48px;
         background-color: $pink_color;
         border-radius: 0px 23px 23px 0px;
-        border: none;
+        border: 1px solid $pink_color;
         color: $white_color;
         font-weight: 400;
         font-size: 14px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: $white_color;
+            color: $pink_color;
+        }
     }
 }
 
@@ -1973,6 +1979,10 @@ input[type=number] {
     display: none;
 }
 
+.hide-tablet {
+    display: none;
+}
+
 /* Tablet */
 @media screen and (max-width: 1140px) {
     .hide-desctop {
@@ -2023,6 +2033,9 @@ input[type=number] {
     }
 
     .subscribe {
+        min-height: 438px;
+        height: auto;
+        
         &__block {
         flex-direction: column;
         }
@@ -2193,6 +2206,7 @@ input[type=number] {
 
             &[open] {
                 z-index: 5;
+
                 & summary {
                     color: $pink_color;
                 }
@@ -2241,31 +2255,52 @@ input[type=number] {
 }
 
 /* Phone */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     .hide-desctop {
         display: block;
     }
 
-    .search {
-        &__input {
-            border: 1px solid $light_grey_color;
-            width: 100px;
-        }
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
 
-        &__form {
-            margin-left: 20px;
+    .brand {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .form {
+        &_flex {
+            width: 100%;
         }
     }
-    
-    .account {
-        &__button {
-            margin-left: 15px;
-            &_small {
-                padding: 0;
-                width: 38px;
-                display: flex;
-                justify-content: center;
-            }
+
+    .search {
+        margin-top: 20px;
+        width: 100%;
+
+        &__form {
+            margin-left: 0;
+            width: 100%;
+        }
+
+        &__input {
+            width: 100%;
+        }
+    }
+
+    .personal {
+        margin-top: 20px;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .cart {
+        &__inner {
+            left: 0;
+            right: auto;
         }
     }
 
@@ -2336,6 +2371,20 @@ input[type=number] {
     .offers {
         &__item {
             padding-top: 230px;
+        }
+    }
+
+    .fetured {
+        &__item {
+            width: 100%;
+        }
+
+        &__item-img {
+            width: 100%;
+        }
+
+        &__item-atc-block {
+            top: 200px;
         }
     }
 

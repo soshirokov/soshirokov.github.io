@@ -27,14 +27,12 @@
                 <div class="brand">
                     <a href="index.html" class="logo">
                         <img src="img/logo.png" alt="The Brand" class="logo__image">
-                        <div class="site-name logo__site-name hide-phone">Bran<span
-                                class="site-name_bold site-name_pink">d</span>
+                        <div class="site-name logo__site-name">Bran<span class="site-name_bold site-name_pink">d</span>
                         </div>
                     </a>
                     <div class="search">
                         <div class="search__form">
-                            <div
-                                class="button button_bd_grey button_grey search__button search__button_radius_left hide-phone">
+                            <div class="button button_bd_grey button_grey search__button search__button_radius_left">
                                 Browse<i class="fas fa-caret-down button__caret icon caret_grey"></i>
                                 <div class="search__mega-menu mega-menu">
                                     <div class="mega-menu__item">
@@ -73,7 +71,9 @@
                     <details class="cart">
                         <div class="cart__inner">
                             <div class="cart-item">
-                                <img src="img/cart_item_1.jpg" alt="Rebox Zane" class="cart-item__img">
+                                <a href="single.html" class="cart-item__link">
+                                    <img src="img/cart_item_1.jpg" alt="Rebox Zane" class="cart-item__img">
+                                </a>
                                 <div class="cart-item__details">
                                     <div class="cart-item__label">Rebox Zane</div>
                                     <div class="cart-item__rating">
@@ -94,7 +94,9 @@
                                 </div>
                             </div>
                             <div class="cart-item">
-                                <img src="img/cart_item_2.jpg" alt="Rebox Zane" class="cart-item__img">
+                                <a href="single.html" class="cart-item__link">
+                                    <img src="img/cart_item_2.jpg" alt="Rebox Zane" class="cart-item__img">
+                                </a>
                                 <div class="cart-item__details">
                                     <div class="cart-item__label">Rebox Zane</div>
                                     <div class="cart-item__rating">
@@ -133,11 +135,7 @@
                         </summary>
                     </details>
                     <div class="account">
-                        <a href="#" class="account__button button button_pink button_font_medium hide-phone">My Account
-                        </a>
-                        <a href="#"
-                            class="account__button button button_pink button_font_medium hide-desctop account__button_small">
-                            <i class="far fa-user"></i>
+                        <a href="#" class="account__button button button_pink button_font_medium">My Account
                         </a>
                     </div>
                 </div>
@@ -147,7 +145,7 @@
     <nav class="menu">
         <div class="my-container">
             <div class="menu__box">
-                <div class="menu__bars hide-desctop">Menu<i class="fas fa-bars menu__bars-icon"></i></div>
+                <div class="menu__bars hide-tablet">Menu<i class="fas fa-bars menu__bars-icon"></i></div>
                 <ul class="menu__list">
                     <li class="menu__item"><a href="product.html" class="menu__link">Home</a>
                         <div class="mega-menu">
@@ -1021,42 +1019,43 @@
             </div>
         </div>
     </section>
-    <section class="subscribe subscribe_nomargin">
-        <div class="my-container height_full">
-            <div class="subscribe__block height_full">
-                <div class="quotes height_full">
-                    <div class="quotes__carousel">
-                        <figure class="quotes__item">
-                            <div class="quotes__photo-block">
-                                <img src="img/Bin_Burhan.png" alt="Bin Burhan" class="quotes__photo-image">
+    <footer>
+        <section class="subscribe">
+            <div class="my-container height_full">
+                <div class="subscribe__block height_full">
+                    <div class="quotes height_full">
+                        <div class="quotes__carousel">
+                            <figure class="quotes__item">
+                                <div class="quotes__photo-block">
+                                    <img src="img/Bin_Burhan.png" alt="Bin Burhan" class="quotes__photo-image">
+                                </div>
+                                <div class="quotes__text-block">
+                                    <div class="quotes__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
+                                        pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”
+                                    </div>
+                                    <div class="quotes__author">Bin Burhan</div>
+                                    <div class="quotes__adress">Dhaka, Bd</div>
+                                </div>
+                            </figure>
+                            <div class="quotes__carousel-buttons">
+                                <div class="quotes__carousel-button"></div>
+                                <div class="quotes__carousel-button quotes__carousel-button_active"></div>
+                                <div class="quotes__carousel-button"></div>
                             </div>
-                            <div class="quotes__text-block">
-                                <div class="quotes__text">“Vestibulum quis porttitor dui! Quisque viverra nunc mi, a
-                                    pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</div>
-                                <div class="quotes__author">Bin Burhan</div>
-                                <div class="quotes__adress">Dhaka, Bd</div>
-                            </div>
-                        </figure>
-                        <div class="quotes__carousel-buttons">
-                            <div class="quotes__carousel-button"></div>
-                            <div class="quotes__carousel-button quotes__carousel-button_active"></div>
-                            <div class="quotes__carousel-button"></div>
                         </div>
                     </div>
-                </div>
-                <div class="subscribe-form">
-                    <div class="subscribe-form__heading">Subscribe</div>
-                    <div class="subscribe-form__subheading">for our newletter and promotion</div>
-                    <form class="subscribe-form__form" action="#">
-                        <input id="subscribe-email" type="email" required="true" class="subscribe-form__input"
-                            placeholder="Enter Your Email">
-                        <button class="subscribe-form__button" type="submit">Subscribe</button>
-                    </form>
+                    <div class="subscribe-form">
+                        <div class="subscribe-form__heading">Subscribe</div>
+                        <div class="subscribe-form__subheading">for our newletter and promotion</div>
+                        <form class="subscribe-form__form" action="#">
+                            <input id="subscribe-email" type="email" required="true" class="subscribe-form__input"
+                                placeholder="Enter Your Email">
+                            <button class="subscribe-form__button" type="submit">Subscribe</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <footer>
+        </section>
         <div class="footer-content">
             <div class="my-container">
                 <div class="footer-content-block">
