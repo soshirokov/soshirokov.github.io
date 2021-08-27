@@ -2217,7 +2217,7 @@ input[type=number] {
 }
 
 /* Tablet */
-@media screen and (max-width: 1140px) {
+@media screen and (max-width: 1139px) {
   .my-container {
     padding: 0 20px;
   }
@@ -2446,6 +2446,20 @@ input[type=number] {
   }
   .top-filter__check-label {
     margin-right: 0;
+  }
+  .cart-full__column_big {
+    margin-right: 0;
+  }
+  .cart-full__checkout {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .cart-full__to-checkout {
+    width: 48%;
+  }
+  .total {
+    margin-top: 50px;
+    width: 100%;
   }
   .hide-tablet {
     display: none;
@@ -2722,6 +2736,69 @@ input[type=number] {
   }
   .feature-box__item:last-child {
     margin-bottom: 0;
+  }
+  .cart-full__to-checkout {
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .cart-full__controls {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cart-full__button {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .cart-full__button:last-child {
+    margin-bottom: 0;
+  }
+  .cart-full__line {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+            box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    position: relative;
+    border-bottom: none;
+  }
+  .cart-full__line_labels {
+    display: none;
+  }
+  .cart-full__column_center {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-top: 10px;
+    line-height: 30px;
+    width: 50%;
+  }
+  .cart-full__column_center:last-child {
+    margin-top: 0;
+  }
+  .cart-full__column_big {
+    width: 100%;
+  }
+  .cart-full__small-label {
+    display: inline;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.015em;
+    color: #222222;
+    margin-right: 8px;
+  }
+  .cart-full__remove {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    line-height: 100%;
+  }
+  .total {
+    margin-top: 0;
   }
   .hide-phone {
     display: none;
