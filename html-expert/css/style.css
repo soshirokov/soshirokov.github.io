@@ -2298,8 +2298,18 @@ input[type=number] {
     height: 350px;
   }
   .fetured__list {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .fetured__item {
+    width: 49%;
+  }
+  .fetured__item-img {
+    width: 100%;
+  }
+  .fetured__item-atc-block {
+    top: calc(50% - 75px);
   }
   .quotes {
     -ms-flex-preferred-size: 100%;
@@ -2579,7 +2589,7 @@ input[type=number] {
     width: 100%;
   }
   .fetured__item-atc-block {
-    top: 200px;
+    top: calc(50% - 75px);
   }
   .offer__banner {
     margin: 100px -20px 0 -20px;
@@ -2714,6 +2724,9 @@ input[type=number] {
   .top-filter__label-icon {
     margin-left: 0;
   }
+  .top-filter__label {
+    font-size: 10px;
+  }
   .pagination-block__menu {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2802,6 +2815,18 @@ input[type=number] {
   }
   .hide-phone {
     display: none;
+  }
+  .login-form__submit-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .checkout-item__continue-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */

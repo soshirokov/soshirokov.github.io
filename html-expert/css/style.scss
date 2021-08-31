@@ -2069,7 +2069,19 @@ input[type=number] {
 
     .fetured {
         &__list {
-            justify-content: space-around;
+            justify-content: space-between;
+        }
+
+        &__item {
+            width: 49%;
+        }
+
+        &__item-img {
+            width: 100%;
+        }
+
+        &__item-atc-block {
+            top: calc(50% - 75px)
         }
     }
 
@@ -2391,7 +2403,7 @@ input[type=number] {
         }
 
         &__item-atc-block {
-            top: 200px;
+            top: calc(50% - 75px)
         }
     }
 
@@ -2536,6 +2548,10 @@ input[type=number] {
         &__label-icon {
             margin-left: 0;
         }
+
+        &__label {
+            font-size: 10px;
+        }
     }
     
     .pagination-block {
@@ -2636,5 +2652,17 @@ input[type=number] {
 
     .hide-phone {
         display: none;
+    }
+
+    .login-form {
+        &__submit-box {
+            flex-direction: column;
+        }
+    }
+
+    .checkout-item {
+        &__continue-box {
+            flex-direction: column;
+        }
     }
 }
