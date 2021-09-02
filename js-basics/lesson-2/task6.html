@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        'use strict';
+
+        let sum = +(prompt('Введите сумму'));
+        let rubleCase = switchCase(sum);
+
+        alert('Ваша сумма в ' + sum + ' ' + rubleCase + ' успешно зачислена.');
+
+
+        function switchCase(sum) {
+            sum = String(sum);
+
+            //если число между x11 и x19 сразу возвращаем "рублей", логики там отдельной нет
+            if (sum.charAt(sum.length - 2) == '1') {
+                return 'рублей';
+            }
+
+            switch (sum.charAt(sum.length - 1)) {
+                case '1':
+                    return 'рубль';
+                case '2':
+                case '3':
+                case '4':
+                    return 'рубля';
+                case '0':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                    return 'рублей';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
