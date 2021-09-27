@@ -401,6 +401,27 @@ select {
         top: calc(100% + 16px);
         z-index: 5;
     }
+
+    &__count-box {
+        background-color: $pink_color;
+        position: absolute;
+        top: -5px;
+        right: -15px;
+        color: $white_color;
+        font-weight: 400;
+        border-radius: 12px;
+        font-size: 8px;
+        width: 14px;
+        height: 14px;
+        line-height: 14px;
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    &__default {
+        width: 230px;
+        margin-bottom: 20px;
+    }
 }
 
 .cart-item {
@@ -416,6 +437,7 @@ select {
         font-weight: 700;
         text-transform: uppercase;
         margin-top: 10px;
+        max-width: 100px;
     }
 
     &__rating {
@@ -441,6 +463,12 @@ select {
         color: $light_text_grey_color;
         align-self: center;
         cursor: pointer;
+    }
+
+    &__img {
+        width: 72px;
+        height: 85px;
+        object-fit: cover;
     }
 }
 
