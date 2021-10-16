@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <title>eShop</title>
+   <!--<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">-->
+   <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+   <div id="mainApp">
+      <header>
+         <div class="container flex right-direction">
+            <div class="cart-box">
+               Поиск товара: <input type="text" name="search" id="search" v-model="search" @keyup="filterGoods">
+               <button class="cart-button" type="button" @click="cartShow">Корзина</button>
+               <basket-card v-if="basketCardVision"></basket-card>
+            </div>
+         </div>
+      </header>
+      <main>
+         <div class="container">
+            <div class="goods-list">
+               <goods-item v-for="item in filteredGoods" v-bind:item="item"></goods-item>
+            </div>
+         </div>
+      </main>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+   <script src="script.js"></script>
+</body>
+
+</html>
