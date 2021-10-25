@@ -15,10 +15,12 @@ Vue.component('goods-item', {
     template: `
         <div class="goods-item">
             <img class="goods-image" :src="item.image">
-            <h3 class="goods-label">{{ item.title }}</h3>
-            <div class="goods-price">{{ item.price }}</div>
-            <div class="goods-btn-box">
-            <button class="goods-btn" @click="addToCart(item)">Добавить</button>
+            <button class="goods-btn" @click="addToCart(item)">Add to Cart</button>
+            <div class="goods-desc">
+                <h3 class="goods-label">{{ item.title }}</h3>
+                <div class="goods-price">\${{ item.price }}</div>
+                <div class="goods-btn-box">
+            </div>
             </div>
         </div>
     `,
@@ -40,11 +42,10 @@ Vue.component('basket-goods-item', {
         </div>
         <div class="cart-itemDesc">
         <h4 class="cart-itemName">{{item.title}}</h4>
-        <div class="cart-itemPrice">{{item.price}}</div>
-        <div class="cart-itemQnt">Количество: {{item.quantity}}</div>
+        <div class="cart-itemPrice">\${{item.price}} x {{item.quantity}}</div>
         </div>
         <div class="cart-itemRemove" @click="deletitem(item)">
-        <i class="fas fa-times"></i>
+        <i class="fas fa-times-circle"></i>
         </div>
     </div>
     `,
@@ -75,8 +76,8 @@ Vue.component('basket-card', {
             <i class="fas fa-times"></i>
             </div>
             <slot></slot>
-            <div class="cart-total-count">Товаров в корзине: {{ cart.countGoods }}</div>
-            <div class="cart-total-price">На сумму: {{ cart.amount }}</div>
+            <div class="cart-total-count">Total items:<span>{{ cart.countGoods }}</span></div>
+            <div class="cart-total-price">Total price:<span>\${{ cart.amount }}</span></div>
         </div>
     `,
     methods: {
