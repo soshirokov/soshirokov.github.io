@@ -7,31 +7,31 @@ app.use(express.json());
 app.use(cors());
 app.use(express.static('./static'));
 
-app.get('/catalog', (request, resolve) => {
+app.get('/catalog', (request, response) => {
     getCatalog().then((goods) => {
-        resolve.setHeader('Content-type', 'application/json');
-        resolve.send(goods);
+        response.setHeader('Content-type', 'application/json');
+        response.send(goods);
     });
 });
 
-app.get('/basket', (request, resolve) => {
+app.get('/basket', (request, response) => {
     getBasket().then((goods) => {
-        resolve.setHeader('Content-type', 'application/json');
-        resolve.send(goods);
+        response.setHeader('Content-type', 'application/json');
+        response.send(goods);
     });
 });
 
-app.patch('/basket', (request, resolve) => {
+app.patch('/basket', (request, response) => {
     addToBasket(request.body).then((goods) => {
-        resolve.setHeader('Content-type', 'application/json');
-        resolve.send(goods);
+        response.setHeader('Content-type', 'application/json');
+        response.send(goods);
     });
 });
 
-app.delete('/basket', (request, resolve) => {
+app.delete('/basket', (request, response) => {
     removeFromBasket(request.body.id).then((goods) => {
-        resolve.setHeader('Content-type', 'application/json');
-        resolve.send(goods);
+        response.setHeader('Content-type', 'application/json');
+        response.send(goods);
     });
 });
 

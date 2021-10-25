@@ -25,7 +25,7 @@ Vue.component('goods-item', {
     methods: {
         addToCart: function (item) {
             makeRequest(`${url}${cart}`, 'PATCH', { 'Content-type': 'application/json' }, item).then(cart => {
-                this.cart = cart;
+                app.cart = cart;
             });
         }
     }
@@ -51,7 +51,7 @@ Vue.component('basket-goods-item', {
     methods: {
         deletitem: function (item) {
             makeRequest(`${url}${cart}`, 'DELETE', { 'Content-type': 'application/json' }, item).then(cart => {
-                this.cart = cart;
+                app.cart = cart;
             });
         }
     }
