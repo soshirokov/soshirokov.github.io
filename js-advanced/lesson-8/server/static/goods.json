@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "image": "img/item-01.jpg",
+        "title": "Mango People T-shirt",
+        "price": 50
+    },
+    {
+        "id": 2,
+        "image": "img/item-02.jpg",
+        "title": "Mango Bouse",
+        "price": 50
+    },
+    {
+        "id": 3,
+        "image": "img/item-03.jpg",
+        "title": "Mango Bag",
+        "price": 50
+    },
+    {
+        "id": 4,
+        "image": "img/item-04.jpg",
+        "title": "Mango Dress",
+        "price": 50
+    },
+    {
+        "id": 5,
+        "image": "img/item-05.jpg",
+        "title": "Mango Suit",
+        "price": 50
+    },
+    {
+        "id": 6,
+        "image": "img/item-06.jpg",
+        "title": "Mango People T-shirt",
+        "price": 50
+    },
+    {
+        "id": 7,
+        "image": "img/item-07.jpg",
+        "title": "Mango People T-shirt",
+        "price": 50
+    },
+    {
+        "id": 8,
+        "image": "img/item-08.jpg",
+        "title": "Mango People T-shirt",
+        "price": 50
+    }
+]
