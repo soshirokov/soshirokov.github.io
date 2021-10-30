@@ -28,6 +28,19 @@ var app = new Vue({
         },
         cartShow: function () {
             this.basketCardVision = !this.basketCardVision;
+        },
+        deletitem: function (item) {
+            makeRequest(`${url}${cart}`, 'DELETE', { 'Content-type': 'application/json' }, item).then(cart => {
+                this.cart = cart;
+            });
+        },
+        addToCart: function (item) {
+            makeRequest(`${url}${cart}`, 'PATCH', { 'Content-type': 'application/json' }, item).then(cart => {
+                this.cart = cart;
+            });
+        },
+        closeCart: function () {
+            this.basketCardVision = false;
         }
     },
     computed: {
@@ -39,6 +52,8 @@ var app = new Vue({
         },
     },
     components: {
-        basketCard, basketGoodsItem, goodsItem
+        basketCard,
+        basketGoodsItem,
+        goodsItem
     }
 });

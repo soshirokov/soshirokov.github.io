@@ -12,7 +12,7 @@
 </head>
 
 <body>
-   <div id="mainApp">
+   <div id="mainApp" v-on:close-cart="closeCart">
       <header>
          <div class="container flex space-between">
             <div class="logo">eShop</div>
@@ -28,7 +28,7 @@
                </span>
                <basket-card v-if="basketCardVision" :cart="cart">
                   <div class="emptyCart" v-if="emptyCart">Cart is empty</div>
-                  <basket-goods-item v-for="item in cart.contents" :item="item" :realCart="cart"></basket-goods-item>
+                  <basket-goods-item v-for="item in cart.contents" :item="item"></basket-goods-item>
                </basket-card>
             </div>
          </div>
@@ -36,7 +36,7 @@
       <main>
          <div class="container">
             <div class="goods-list">
-               <goods-item v-for="item in filteredGoods" :item="item" :realCart="cart"></goods-item>
+               <goods-item v-for="item in filteredGoods" :item="item"></goods-item>
             </div>
          </div>
       </main>

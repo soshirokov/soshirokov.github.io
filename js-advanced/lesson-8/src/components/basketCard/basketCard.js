@@ -21,8 +21,8 @@ export const basketCard = {
         </div>
     `,
     methods: {
-        closeCart: function () {
-            app.basketCardVision = false;
-        }
+        closeCart() {
+            this.$root.closeCart();
+        },
     }
 };

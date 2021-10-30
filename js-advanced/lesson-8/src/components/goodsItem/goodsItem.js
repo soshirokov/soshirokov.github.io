@@ -2,11 +2,12 @@ import { makeRequest } from '../../makeRequest';
 import { url, cart } from '../../constants';
 
 export const goodsItem = {
-    props: ['item', 'realCart'],
+    props: ['item'],
+    emits: ['update'],
     template: `
         <div class="goods-item">
             <img class="goods-image" :src="item.image">
-            <button class="goods-btn" @click="addToCart(item, realCart)">Add to Cart</button>
+            <button class="goods-btn" @click="addToCart(item)">Add to Cart</button>
             <div class="goods-desc">
                 <h3 class="goods-label">{{ item.title }}</h3>
                 <div class="goods-price">\${{ item.price }}</div>
@@ -16,10 +17,8 @@ export const goodsItem = {
         </div>
     `,
     methods: {
-        addToCart: function (item, realCart) {
-            makeRequest(`${url}${cart}`, 'PATCH', { 'Content-type': 'application/json' }, item).then(cart => {
-                realCart = cart;
-            });
+        addToCart: function (item) {
+            this.$root.addToCart(item);
         }
     }
 };
