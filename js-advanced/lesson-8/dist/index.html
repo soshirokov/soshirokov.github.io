@@ -26,9 +26,10 @@
                         fill="#333333" />
                   </svg>
                </span>
-               <basket-card v-if="basketCardVision" :cart="cart">
+               <basket-card v-if="basketCardVision" :cart="cart" @close-cart="closeCart">
                   <div class="emptyCart" v-if="emptyCart">Cart is empty</div>
-                  <basket-goods-item v-for="item in cart.contents" :item="item"></basket-goods-item>
+                  <basket-goods-item v-for="item in cart.contents" :item="item" @delete-item="deletitem">
+                  </basket-goods-item>
                </basket-card>
             </div>
          </div>
@@ -36,7 +37,7 @@
       <main>
          <div class="container">
             <div class="goods-list">
-               <goods-item v-for="item in filteredGoods" :item="item"></goods-item>
+               <goods-item v-for="item in filteredGoods" :item="item" @add-to-cart="addToCart"></goods-item>
             </div>
          </div>
       </main>

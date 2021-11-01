@@ -29,12 +29,13 @@ var app = new Vue({
         cartShow: function () {
             this.basketCardVision = !this.basketCardVision;
         },
-        deletitem: function (item) {
+        deletitem: function ($event, item) {
             makeRequest(`${url}${cart}`, 'DELETE', { 'Content-type': 'application/json' }, item).then(cart => {
                 this.cart = cart;
             });
         },
-        addToCart: function (item) {
+        addToCart: function ($event, item) {
+            console.log(item);
             makeRequest(`${url}${cart}`, 'PATCH', { 'Content-type': 'application/json' }, item).then(cart => {
                 this.cart = cart;
             });

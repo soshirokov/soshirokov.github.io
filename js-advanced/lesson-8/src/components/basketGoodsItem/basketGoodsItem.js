@@ -12,14 +12,9 @@ export const basketGoodsItem = {
         <h4 class="cart-itemName">{{item.title}}</h4>
         <div class="cart-itemPrice">\${{item.price}} x {{item.quantity}}</div>
         </div>
-        <div class="cart-itemRemove" @click="deletitem(item)">
+        <div class="cart-itemRemove" @click="$emit('delete-item', $event, item)">
         <i class="fas fa-times-circle"></i>
         </div>
     </div>
     `,
-    methods: {
-        deletitem: function (item) {
-            this.$root.deletitem(item);
-        }
-    }
 };
