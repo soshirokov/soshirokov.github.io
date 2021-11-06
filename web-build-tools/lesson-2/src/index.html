@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор дат</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="mainCard">
+            <div class="controls">
+                <div class="conrtolBtn" data-id="calcDateTab">Калькулятор дат</div>
+                <div class="conrtolBtn" data-id="timerTab">Таймер</div>
+            </div>
+            <div id="calcDateTab" class="tab active">
+                <h2>Калькулятор дат</h2>
+                <form id="calcDate">
+                    <label for="dateFrom">
+                        Первая дата:
+                        <input type="date" name="dateFrom" id="dateFrom">
+                    </label>
+                    <label for="dateTo">
+                        Вторая дата:
+                        <input type="date" name="dateTo" id="dateTo">
+                    </label>
+                    <button type="submit">Рассчитать промежуток</button>
+                </form>
+            </div>
+            <div id="timerTab" class="tab">
+                <h2>Таймер</h2>
+                <form id="timer">
+                    <label for="timerSet">
+                        Укажите количество секунд:
+                        <input type="number" name="timerSet" id="timerSet">
+                        <input type="hidden" name="started" id="started" data-started="0">
+                    </label>
+                    <button type="submit" id="timerCtrl">Старт</button>
+                </form>
+            </div>
+            <p id="output">
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
