@@ -12,7 +12,10 @@ module.exports = {
         rules: [
             {
                 test: /\.(png|jpg|gif|mp3|mp4)$/i,
-                use: ['file-loader']
+                type: "asset/resource",
+                generator: {
+                    filename: "assets/[hash][ext][query]",
+                },
             },
             {
                 test: /\.s[ac]ss$/i,
