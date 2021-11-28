@@ -1,15 +1,15 @@
 <template>
-  <div class="costBlock">
-    <table class="costList">
+  <div :class="$style.costBlock">
+    <table :class="$style.costList">
       <tr>
-        <th class="cell">Date</th>
-        <th class="cell">Category</th>
-        <th class="cell">Value</th>
+        <th :class="$style.cell">Date</th>
+        <th :class="$style.cell">Category</th>
+        <th :class="$style.cell">Value</th>
       </tr>
       <tr v-for="(item, index) in items" :key="index">
-        <td class="cell">{{ item.date }}</td>
-        <td class="cell">{{ item.category }}</td>
-        <td class="cell">{{ item.value }}</td>
+        <td :class="$style.cell">{{ item.date }}</td>
+        <td :class="$style.cell">{{ item.category }}</td>
+        <td :class="$style.cell">{{ item.value }}</td>
       </tr>
     </table>
   </div>
@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" module>
 .costBlock {
   display: flex;
   justify-content: center;

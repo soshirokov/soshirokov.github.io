@@ -1,9 +1,14 @@
 <template>
-  <div class="addCost">
-    <div class="addPayment" v-show="!showAddCategoryForm">
-      <input class="input" type="text" placeholder="Date" v-model="date" />
-      <div class="categoryControl">
-        <select v-model="category">
+  <div :class="$style.addCost">
+    <div :class="$style.addPayment" v-show="!showAddCategoryForm">
+      <input
+        :class="$style.input"
+        type="text"
+        placeholder="Date"
+        v-model="date"
+      />
+      <div :class="$style.categoryControl">
+        <select :class="$style.select" v-model="category">
           <option
             v-for="category of categoryList"
             :value="category"
@@ -13,22 +18,27 @@
           </option>
         </select>
         <a
-          class="addCategoryLink"
+          :class="$style.addCategoryLink"
           @click="showAddCategoryForm = !showAddCategoryForm"
           >Add Category +</a
         >
       </div>
-      <input class="input" type="text" placeholder="Value" v-model="value" />
-      <div class="btn" @click="addPayment">Add</div>
-    </div>
-    <div class="addCategory" v-show="showAddCategoryForm">
       <input
-        class="input"
+        :class="$style.input"
+        type="text"
+        placeholder="Value"
+        v-model="value"
+      />
+      <div :class="$style.btn" @click="addPayment">Add</div>
+    </div>
+    <div :class="$style.addCategory" v-show="showAddCategoryForm">
+      <input
+        :class="$style.input"
         type="text"
         v-model="newCategory"
         placeholder="New Category Name"
       />
-      <div class="btn" @click="addNewCategory">Add or Close</div>
+      <div :class="$style.btn" @click="addNewCategory">Add or Close</div>
     </div>
   </div>
 </template>
@@ -84,7 +94,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" module>
 .addCost {
   width: 400px;
   background: #fff;
@@ -116,7 +126,7 @@ export default {
   width: 100%;
 }
 
-select {
+.select {
   width: 100%;
   height: 38px;
   line-height: 38px;

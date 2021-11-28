@@ -1,16 +1,16 @@
 <template>
-  <div class="pagination">
-    <span @click="getPrevous">Previous</span>
+  <div :class="$style.pagination">
+    <span :class="$style.span" @click="getPrevous">Previous</span>
     <span
       class="page"
       v-for="n in pages"
       :key="n"
       @click="selectPage(n)"
-      :class="{ active: n == isActive }"
+      :class="[{ [$style.active]: n == isActive }, $style.span]"
     >
       {{ n }}</span
     >
-    <span @click="getNext">Next</span>
+    <span :class="$style.span" @click="getNext">Next</span>
   </div>
 </template>
 
@@ -44,12 +44,12 @@ export default {
 };
 </script>
 
-<style>
+<style module>
 .pagination {
   margin-top: 20px;
 }
 
-.pagination span {
+.span {
   font-weight: 600;
   cursor: pointer;
   padding: 0 10px;
