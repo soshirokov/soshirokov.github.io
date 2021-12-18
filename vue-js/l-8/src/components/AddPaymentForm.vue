@@ -1,7 +1,7 @@
 <template>
-  <v-row class="mt-10" justify="center">
-    <v-card class="pa-10">
-      <div :class="$style.addPayment" v-show="!showAddCategoryForm">
+  <v-row justify="center">
+    <v-card class="pa-10" width="100%">
+      <div v-show="!showAddCategoryForm">
         <v-text-field label="Date" v-model="date" name="date"></v-text-field>
         <v-select
           :items="categoryList"
@@ -16,6 +16,7 @@
           tile
           small
           @click="showAddCategoryForm = !showAddCategoryForm"
+          class="mb-4"
           >Add Category</v-btn
         >
         <v-text-field label="Value" v-model="value" name="value"></v-text-field>
@@ -38,12 +39,12 @@
           align-self="center"
           block
           class="mb-4"
-          to="/"
+          @click="closeForm"
         >
           Close Form
         </v-btn>
       </div>
-      <div :class="$style.addCategory" v-show="showAddCategoryForm">
+      <div :class="$style.addCategory" v-if="showAddCategoryForm">
         <v-text-field
           label="New Category Name"
           v-model="newCategory"
@@ -59,7 +60,7 @@
           class="mb-4"
           @click="addNewCategory"
         >
-          Add
+          Add or Close
         </v-btn>
       </div>
     </v-card>
@@ -102,27 +103,28 @@ export default {
         date: date || this.paymentDate,
       };
       this.$emit("add-payment", data);
+      this.value = '';
+      this.category = '';
     },
     addNewCategory() {
       if (this.newCategory) {
         this.addCategory(this.newCategory);
       }
       this.showAddCategoryForm = !this.showAddCategoryForm;
-      console.log(this.categoryList);
+      this.newCategory = '';
     },
     addFromLink() {
       this.category = this.$route.params.categorySelected;
       this.value = this.$route.query.value;
       this.date = this.paymentDate;
-      if (this.category && this.value && this.date) {
-        this.addPayment();
-      }
+      this.showForm();
+    },
+    closeForm() {
+      this.$emit('close-form');
     },
   },
   created() {
     this.fetchCategoryListData();
-  },
-  mounted() {
     this.addFromLink();
   },
 };

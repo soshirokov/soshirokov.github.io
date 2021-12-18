@@ -18,23 +18,50 @@
             <td>{{ item.category }}</td>
             <td>{{ item.value }}</td>
             <td>
-              <v-icon
-                @click="showMenu($event.currentTarget, item)"
-                color="primary"
-                >mdi-dots-vertical</v-icon
-              >
+              <v-menu bottom left>
+                <template v-slot:activator="{ on, attrs }">
+                  <v-btn dark icon v-bind="attrs" v-on="on">
+                    <v-icon color="primary">mdi-dots-vertical</v-icon>
+                  </v-btn>
+                </template>
+
+                <v-list>
+                  <v-list-item>
+                    <v-list-item-title
+                      :class="$style.pointer"
+                      @click="editPayment(item.id)"
+                    >
+                      Редактировать
+                    </v-list-item-title>
+                  </v-list-item>
+                  <v-list-item>
+                    <v-list-item-title
+                      :class="$style.pointer"
+                      @click="deleteItemFromList(item.id)"
+                      >Удалить</v-list-item-title
+                    >
+                  </v-list-item>
+                </v-list>
+              </v-menu>
             </td>
           </tr>
         </tbody>
       </template>
     </v-simple-table>
-    <transition :name="$style.fade">
-      <ContextMenu v-if="showContext" :settings="settings" />
-    </transition>
+    <v-dialog
+      transition="dialog-bottom-transition"
+      max-width="600"
+      v-model="showEdit"
+    >
+      <template>
+        <EditPayment :item="selectedItem" @close-edit="closeEdit" />
+      </template>
+    </v-dialog>
   </v-row>
 </template>
 <script>
-import ContextMenu from "./ContextMenu.vue";
+import { mapMutations } from "vuex";
+import EditPayment from "../components/EditPayment.vue";
 
 export default {
   name: "PaymentDisplay",
@@ -46,46 +73,28 @@ export default {
   },
   data() {
     return {
-      showContext: false,
-      settings: null,
+      showEdit: false,
+      selectedItem: {},
     };
   },
   methods: {
-    showMenu(element, item) {
-      if (this.showContext == true) this.$contextMenu.hide();
-      else this.$contextMenu.show({ item: item, element: element });
+    ...mapMutations({ deleteItemFromList: "REMOVE_PAYMENT_DATA" }),
+    editPayment(id) {
+      this.selectedItem = this.items.filter(item => item.id == id)[0];
+      this.showEdit = true;
     },
-    contextOpen(settings) {
-      this.settings = settings;
-      this.showContext = true;
-    },
-    contextClose() {
-      this.showContext = false;
-    },
+    closeEdit() {
+      this.showEdit = false;
+    }
   },
   components: {
-    ContextMenu,
-  },
-  mounted() {
-    this.$contextMenu.EventBus.$on("show", this.contextOpen);
-    this.$contextMenu.EventBus.$on("hide", this.contextClose);
-  },
+    EditPayment
+  }
 };
 </script>
 
 <style lang="scss" module>
-.fade {
-  &:global(-enter-active) {
-    transition: opacity 0.5s;
-  }
-  &:global(-leave-active) {
-    transition: opacity 0.5s;
-  }
-  &:global(-enter) {
-    opacity: 0;
-  }
-  &:global(-leave-to) {
-    opacity: 0;
-  }
+.pointer {
+  cursor: pointer;
 }
 </style>

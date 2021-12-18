@@ -7,14 +7,9 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/add/payment/',
-      name: 'addpayment',
-      component: () => import('../components/AddPaymentForm.vue'),
-    },
-    {
       path: '/add/payment/:categorySelected',
-      name: 'addpaymentWithCategory',
-      component: () => import('../components/AddPaymentForm.vue'),
+      name: 'addpayment',
+      component: () => import('../views/Payments.vue'),
     },
     {
       path: '/about',

@@ -1,18 +1,29 @@
 <template>
-  <div :class="$style.editForm">
-    <input :class="$style.input" type="text" v-model="date" />
-    <select :class="$style.select" v-model="category">
-      <option
-        v-for="category of categoryList"
-        :value="category"
-        :key="category"
-      >
-        {{ category }}
-      </option>
-    </select>
-    <input :class="$style.input" type="text" v-model="value" />
-    <div :class="$style.btn" @click="editPayment">Save</div>
-  </div>
+  <v-row justify="center">
+    <v-card class="pa-10" width="100%">
+      <div v-show="!showAddCategoryForm">
+        <v-text-field label="Date" v-model="date" name="date"></v-text-field>
+        <v-select
+          :items="categoryList"
+          v-model="category"
+          label="Category"
+        ></v-select>
+        <v-text-field label="Value" v-model="value" name="value"></v-text-field>
+        <v-btn
+          id="addPayment"
+          color="primary"
+          elevation="2"
+          tile
+          align-self="center"
+          block
+          class="mb-4"
+          @click="editPayment"
+        >
+          Save
+        </v-btn>
+      </div>
+    </v-card>
+  </v-row>
 </template>
 
 <script>
@@ -23,7 +34,7 @@ export default {
   props: {
     item: {
       type: Object,
-      default: () => {},
+      default: () => { },
     },
   },
   data() {
