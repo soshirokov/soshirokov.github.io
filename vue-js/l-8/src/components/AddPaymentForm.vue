@@ -44,7 +44,7 @@
           Close Form
         </v-btn>
       </div>
-      <div :class="$style.addCategory" v-if="showAddCategoryForm">
+      <div v-if="showAddCategoryForm">
         <v-text-field
           label="New Category Name"
           v-model="newCategory"
@@ -131,56 +131,4 @@ export default {
 </script>
 
 <style lang="scss" module>
-.addCost {
-  width: 400px;
-  background: #fff;
-  margin: 20px auto;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.input {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 32px;
-  height: 32px;
-  padding: 0 8px;
-  width: 100%;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-.btn {
-  height: 38px;
-  line-height: 38px;
-  text-transform: uppercase;
-  background: rgb(13, 109, 64);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  width: 100%;
-  display: block;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-.select {
-  width: 100%;
-  height: 38px;
-  line-height: 38px;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.addCategoryLink {
-  width: 200px;
-  flex-grow: 1;
-  display: block;
-  cursor: pointer;
-}
-
-.categoryControl {
-  display: flex;
-}
 </style>

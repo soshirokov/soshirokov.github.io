@@ -70,42 +70,4 @@ export default {
 </script>
 
 <style lang="scss" module>
-.input {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 32px;
-  height: 32px;
-  padding: 0 8px;
-  width: 100%;
-  margin-bottom: 10px;
-  box-sizing: border-box;
-}
-
-.btn {
-  height: 38px;
-  line-height: 38px;
-  text-transform: uppercase;
-  background: rgb(13, 109, 64);
-  color: #fff;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-  width: 100%;
-  display: block;
-  text-decoration: none;
-  margin-top: 10px;
-}
-
-.select {
-  width: 100%;
-  height: 38px;
-  line-height: 38px;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.editForm {
-  padding: 10px;
-  box-sizing: border-box;
-}
 </style>
