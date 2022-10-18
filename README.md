@@ -1,5 +1,7 @@
 # soshirokov.github.io
 
+## Уроки по верстке GeekBrains
+
 * HTML/CSS. Интерактивный курс 2021/05/24
     * https://soshirokov.github.io/html-basic/l-8/index.html - Главная страница
     * https://soshirokov.github.io/html-basic/l-8/contacts.html - Страница контактов
